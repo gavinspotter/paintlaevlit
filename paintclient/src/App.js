@@ -4,7 +4,7 @@ import "./App.css";
 import MainHeader from "./navigation/MainHeader";
 
 function App() {
-  return <MainHeader />;
+  return <MainHeader> hi </MainHeader>;
 }
 
 export default App;
