@@ -6,6 +6,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.use("/api/users");
+
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
   throw error;
