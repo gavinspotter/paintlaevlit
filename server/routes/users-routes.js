@@ -4,4 +4,6 @@ const usersController = require("../controllers/users-controller");
 
 const router = express.Router();
 
-router.get("/api/users/:eid");
+router.get("/users/:eid");
+
+router.post("/signup");
