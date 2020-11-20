@@ -9,3 +9,5 @@ router.get("/users/:eid");
 router.post("/signup");
 
 router.post("/login");
+
+module.exports = router;
