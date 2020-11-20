@@ -14,4 +14,14 @@ const signup = async (req, res, next) => {
     );
     return next(error);
   }
+
+  const createdUser = new User({
+    name,
+    email,
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ra_Barque.jpg",
+    password,
+    places: [],
+    journals: [],
+    blogs: [],
+  });
 };
