@@ -20,3 +20,14 @@ app.use((error, req, res, next) => {
   res.status(error.code || 500);
   res.json({ message: error.message || "an unknown error occured" });
 });
+
+mongoose
+  .connect(
+    "mongodb+srv://gavin:password1234@cluster0.d3tnt.mongodb.net/Paintstuff?retryWrites=true&w=majority"
+  )
+  .then(() => {
+    app.listen(5000);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
