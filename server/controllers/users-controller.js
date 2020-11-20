@@ -20,9 +20,6 @@ const signup = async (req, res, next) => {
     email,
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ra_Barque.jpg",
     password,
-    places: [],
-    journals: [],
-    blogs: [],
   });
 
   try {
@@ -31,4 +28,6 @@ const signup = async (req, res, next) => {
     const error = new HttpError("signing up failed please try again.", 500);
     return next(error);
   }
+
+  res.status(201).json({ user: createdUser.toObject({ getters: true }) });
 };
