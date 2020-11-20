@@ -7,3 +7,5 @@ const router = express.Router();
 router.get("/users/:eid");
 
 router.post("/signup");
+
+router.post("/login");
