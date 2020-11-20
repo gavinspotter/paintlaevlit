@@ -24,4 +24,11 @@ const signup = async (req, res, next) => {
     journals: [],
     blogs: [],
   });
+
+  try {
+    await createdUser.save();
+  } catch (err) {
+    const error = new HttpError("signing up failed please try again.", 500);
+    return next(error);
+  }
 };
