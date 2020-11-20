@@ -1,12 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
 const HttpError = require("./models/HttpError");
 
 const app = express();
 
 app.use(bodyParser.json());
-
-app.use("/api/users");
 
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
@@ -23,7 +23,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://gavin:password1234@cluster0.d3tnt.mongodb.net/Paintstuff?retryWrites=true&w=majority"
+    "mongodb+srv://gavin:Password123@cluster0.d3tnt.mongodb.net/paintstuff?retryWrites=true&w=majority"
   )
   .then(() => {
     app.listen(5000);
