@@ -8,6 +8,6 @@ router.get("/users/:eid");
 
 router.post("/signup", usersController.signup);
 
-router.post("/login");
+router.post("/login", usersController.login);
 
 module.exports = router;
