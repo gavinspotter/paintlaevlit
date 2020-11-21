@@ -3,6 +3,8 @@ const User = require("../models/user");
 
 const getUsersByEmail = async (res, req, next) => {
   const userId = req.params.eid;
+
+  let user;
 };
 
 const signup = async (req, res, next) => {
