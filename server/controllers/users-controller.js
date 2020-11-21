@@ -1,19 +1,13 @@
 const HttpError = require("../models/HttpError");
 const User = require("../models/user");
 
-const getAUserByUsername = async (res, req, next) => {
-  const { username } = req.body;
+const getUsersByUsername = async (req, res, next) => {
+  const userName = req.params.usernamee;
 
-  let existingUser;
-};
-
-const getUsersByUsername = async (res, req, next) => {
-  const userNam = req.params.userName;
-
-  let usera;
+  let user;
 
   try {
-    usera = await User.find({ username: userNam }, "-password");
+    user = await User.find({ email: userName }, "-password");
   } catch (err) {
     const error = new HttpError(
       "fetching user by email failed, please try again later",
@@ -22,7 +16,7 @@ const getUsersByUsername = async (res, req, next) => {
     return next(error);
   }
 
-  res.json({ usera });
+  res.json({ user });
 };
 
 const signup = async (req, res, next) => {

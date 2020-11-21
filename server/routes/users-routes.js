@@ -4,7 +4,7 @@ const usersController = require("../controllers/users-controller");
 
 const router = express.Router();
 
-router.get("/:userName", usersController.getUsersByUsername);
+router.get("/:usernamee", usersController.getUsersByUsername);
 
 router.post("/signup", usersController.signup);
 
