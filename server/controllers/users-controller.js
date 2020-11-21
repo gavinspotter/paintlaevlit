@@ -5,6 +5,10 @@ const getUsersByEmail = async (res, req, next) => {
   const userId = req.params.eid;
 
   let user;
+
+  try {
+    user = await User.find({ email: userId });
+  }
 };
 
 const signup = async (req, res, next) => {
