@@ -16,7 +16,7 @@ const getUsersByUsername = async (res, req, next) => {
     return next(error);
   }
 
-  res.json({ user: user.map((user) => user.toObject({ getters: true })) });
+  res.json({ user });
 };
 
 const signup = async (req, res, next) => {
