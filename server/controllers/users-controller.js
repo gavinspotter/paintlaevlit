@@ -1,6 +1,8 @@
 const HttpError = require("../models/HttpError");
 const User = require("../models/user");
 
+const getUsersByEmail = async (res, req, next) => {};
+
 const signup = async (req, res, next) => {
   const { name, email, password } = req.body;
 
