@@ -13,3 +13,5 @@ const paintSchema = new Schema({
   paintbrand: { type: String, trim: true },
   creator: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
 });
+
+module.exports = mongoose.model("Paint", paintSchema);
