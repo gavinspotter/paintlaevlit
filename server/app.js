@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 
 app.use("/api/users", userRoutes);
 
+app.use("/api/paints", paintRoutes);
+
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
   throw error;
