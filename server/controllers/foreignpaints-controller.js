@@ -27,6 +27,8 @@ const sendPlace = async (req, res, next) => {
     storecode,
     reciever,
   });
+
+  let userRecipient;
 };
 
 exports.sendPlace = sendPlace;
