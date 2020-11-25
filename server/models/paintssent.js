@@ -14,3 +14,5 @@ const paintssentSchema = new Schema({
   storecode: { type: String, trim: true },
   creator: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
 });
+
+module.exports = mongoose.model("Paintsent", paintssentSchema);
