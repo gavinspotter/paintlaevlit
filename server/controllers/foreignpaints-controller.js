@@ -29,6 +29,13 @@ const sendPlace = async (req, res, next) => {
   });
 
   let userRecipient;
+
+  try {
+    userRecipient = await User.findById(reciever);
+  } catch {
+    const error = new HttpError("creating a place failed", 500);
+    return next(error);
+  }
 };
 
 exports.sendPlace = sendPlace;
