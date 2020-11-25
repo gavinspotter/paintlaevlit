@@ -18,8 +18,6 @@ const postForeignPaintByEmail = async (req, res, next) => {
     receiver,
   } = req.body;
 
-  const email = req.params.email;
-
   const foreignPaint = new Foreignpaints({
     room,
     roomdimensions,
@@ -33,14 +31,14 @@ const postForeignPaintByEmail = async (req, res, next) => {
   let user;
 
   try {
-    user = await User.find({ email });
-  } catch (err) {
-    const error = new HttpError("fetching user by email failed", 500);
+    user = await User.findById(receiver);
+  } catch {
+    const error = new HttpError("creating place failed please try again", 500);
     return next(error);
   }
 
   if (!user) {
-    const error = new HttpError("could find email", 404);
+    const error = new HttpError("could not find user for provided id", 404);
     return next(error);
   }
 
