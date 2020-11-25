@@ -36,6 +36,11 @@ const sendPlace = async (req, res, next) => {
     const error = new HttpError("creating a place failed", 500);
     return next(error);
   }
+
+  if (!userRecipient) {
+    const error = new HttpError("could not find user by id", 404);
+    return next(error);
+  }
 };
 
 exports.sendPlace = sendPlace;
