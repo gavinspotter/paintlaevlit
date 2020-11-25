@@ -55,3 +55,5 @@ const postForeignPaintByEmail = async (req, res, next) => {
 
   res.status(201).json({ paint: foreignPaint });
 };
+
+exports.postForeignPaintByEmail = postForeignPaintByEmail;
