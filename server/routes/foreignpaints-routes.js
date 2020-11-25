@@ -4,6 +4,6 @@ const foreignpaintController = require("../controllers/foreignpaints-controller"
 
 const router = express.Router();
 
-router.post("/:email", foreignpaintController.postForeignPaintByEmail);
+router.post("/", foreignpaintController.postForeignPaintByEmail);
 
 module.exports = router;
