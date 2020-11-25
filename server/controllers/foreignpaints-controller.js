@@ -35,4 +35,9 @@ const postForeignPaintByEmail = async (req, res, next) => {
     const error = new HttpError("fetching user by email failed", 500);
     return next(error);
   }
+
+  if (!user) {
+    const error = new HttpError("could find email", 404);
+    return next(error);
+  }
 };
