@@ -13,7 +13,7 @@ const userSchema = new Schema({
   foreignpaints: {
     type: mongoose.Types.ObjectId,
     required: true,
-    ref: "Foreignpaints",
+    ref: "Foreignpaint",
   },
 });
 

@@ -15,4 +15,4 @@ const foreignpaintSchema = new Schema({
   creator: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
 });
 
-module.exports = mongoose.model("Foreignpaints", foreignpaintSchema);
+module.exports = mongoose.model("Foreignpaint", foreignpaintSchema);
