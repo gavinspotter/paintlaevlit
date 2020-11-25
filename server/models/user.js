@@ -16,6 +16,13 @@ const userSchema = new Schema({
       ref: "Foreignpaint",
     },
   ],
+  paintssent: [
+    {
+      type: mongoose.Types.ObjectId,
+      required: true,
+      ref: "Paintsent",
+    },
+  ],
 });
 
 userSchema.plugin(uniqueValidator);

@@ -20,7 +20,7 @@ const postForeignPaintByEmail = async (req, res, next) => {
 
   const foreignPaint = new Foreignpaints({
     room,
-    //roomdimensions,
+    roomdimensions,
     paintname,
     paintcode,
     paintbrand,
