@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const userRoutes = require("./routes/users-routes");
 const paintRoutes = require("./routes/paint-routes");
 const HttpError = require("./models/HttpError");
+const foreignpaintsRoutes = require("./routes/foreignpaints-routes");
 
 const app = express();
 
