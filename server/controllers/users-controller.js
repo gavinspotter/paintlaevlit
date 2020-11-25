@@ -40,6 +40,7 @@ const signup = async (req, res, next) => {
     password,
     paints: [],
     foreignpaints: [],
+    paintssent: [],
   });
 
   try {
