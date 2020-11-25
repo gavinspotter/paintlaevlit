@@ -7,7 +7,23 @@ const Foreignpaints = require("../models/foreignpaints");
 const User = require("../models/user");
 
 const postForeignPaintByEmail = async (req, res, next) => {
-  const foreignPaint = new Foreignpaints({});
+  const {
+    room,
+    roomdimensions,
+    paintname,
+    paintcode,
+    paintbrand,
+    storecode,
+  } = req.body;
+
+  const foreignPaint = new Foreignpaints({
+    room,
+    roomdimensions,
+    paintname,
+    paintcode,
+    paintbrand,
+    storecode,
+  });
 
   const email = req.params.email;
 
