@@ -20,7 +20,7 @@ const getUsersByUsername = async (req, res, next) => {
 };
 
 const signup = async (req, res, next) => {
-  const { name, email, password, username } = req.body;
+  const { name, email, password } = req.body;
 
   let existingUser;
   try {
@@ -34,11 +34,12 @@ const signup = async (req, res, next) => {
   }
 
   const createdUser = new User({
-    username,
     name,
     email,
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ra_Barque.jpg",
     password,
+    paints: [],
+    foreignpaints: [],
   });
 
   try {
