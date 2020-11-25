@@ -15,6 +15,7 @@ const postForeignPaintByEmail = async (req, res, next) => {
     paintbrand,
     storecode,
     creator,
+    receiver,
   } = req.body;
 
   const email = req.params.email;
@@ -26,7 +27,7 @@ const postForeignPaintByEmail = async (req, res, next) => {
     paintcode,
     paintbrand,
     storecode,
-    creator,
+    receiver,
   });
 
   let user;
