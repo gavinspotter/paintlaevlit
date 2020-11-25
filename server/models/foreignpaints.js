@@ -12,7 +12,7 @@ const foreignpaintSchema = new Schema({
   paintcode: { type: String, trim: true },
   paintbrand: { type: String, trim: true },
   storecode: { type: String, trim: true },
-  creator: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
+  receiver: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
 });
 
 module.exports = mongoose.model("Foreignpaint", foreignpaintSchema);
