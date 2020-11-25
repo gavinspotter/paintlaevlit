@@ -8,7 +8,7 @@ const paintSchema = new Schema({
     lenght: { type: Number },
     width: { type: Number },
   },
-  paintname: { type: String, trim: true },
+  paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true },
   paintbrand: { type: String, trim: true },
   creator: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
