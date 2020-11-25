@@ -15,6 +15,8 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/paints", paintRoutes);
 
+app.use("/api/foreignpaints", foreignpaintsRoutes);
+
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
   throw error;
