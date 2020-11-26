@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const Paint = require("../models/paints");
+const HttpError = require("../models/HttpError");
 
 const User = require("../models/user");
 
@@ -47,9 +48,11 @@ const createPaint = async (req, res, next) => {
     await user.save({ session: sess });
     await sess.commitTransaction();
   } catch (err) {
-    const error = new HttpError("creating place fail please try again", 500);
+    const error = new HttpError("creating paint fail please try again", 500);
     return next(error);
   }
+
+  res.status(201).json({ paint: createdPaint });
 };
 
 exports.createPaint = createPaint;
