@@ -9,20 +9,6 @@ const userSchema = new Schema({
   password: { type: String, required: true, minlength: 6 },
   image: { type: String, required: true },
   paints: [{ type: mongoose.Types.ObjectId, required: true, ref: "Paint" }],
-  foreignpaints: [
-    {
-      type: mongoose.Types.ObjectId,
-      required: true,
-      ref: "Foreignpaint",
-    },
-  ],
-  paintssent: [
-    {
-      type: mongoose.Types.ObjectId,
-      required: true,
-      ref: "Paintsent",
-    },
-  ],
 });
 
 userSchema.plugin(uniqueValidator);
