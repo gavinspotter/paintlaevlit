@@ -11,3 +11,4 @@ const sharePaint = async (req, res, next) => {
 
 }
 
+exports.sharePaint = sharePaint
