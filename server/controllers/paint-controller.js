@@ -8,7 +8,7 @@ const User = require("../models/user");
 const createPaint = async (req, res, next) => {
   const {
     room,
-
+    roomdimensions,
     paintname,
     paintcode,
     paintbrand,
@@ -18,7 +18,7 @@ const createPaint = async (req, res, next) => {
 
   const createdPaint = new Paint({
     room,
-
+    roomdimensions,
     paintname,
     paintcode,
     paintbrand,
