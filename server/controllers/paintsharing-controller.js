@@ -20,6 +20,26 @@ const sharePaint = async (req, res, next) => {
         receiver
     } = req.body
 
+    const sendedPaint = new Sendpaints({
+        room,
+        roomdimensions,
+        paintname,
+        paintcode,
+        paintbrand,
+        storecode,
+        sender
+    })
+
+    const receivedPaint = new Receivepaints({
+        room,
+        roomdimensions,
+        paintname,
+        paintcode,
+        paintbrand,
+        storecode,
+        receiver
+    })
+
 }
 
 exports.sharePaint = sharePaint
