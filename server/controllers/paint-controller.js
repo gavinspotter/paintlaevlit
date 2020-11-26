@@ -26,6 +26,13 @@ const createPaint = async (req, res, next) => {
   });
 
   let user;
+
+  try {
+    user = await User.findById(creator);
+  } catch {
+    const error = new HttpError("creating place failed please try again", 500);
+    return next(error);
+  }
 };
 
 exports.createPaint = createPaint;
