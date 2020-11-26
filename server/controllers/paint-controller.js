@@ -38,6 +38,18 @@ const createPaint = async (req, res, next) => {
     const error = new HttpError("could not find user for provided id", 404);
     return next(error);
   }
+
+  try {
+    const sess = await mongoose.startSession();
+    sess.startTransaction();
+    await createdPaint.save({ session: sess });
+    user.paints.push(createdPaint);
+    await user.save({ session: sess });
+    await sess.commitTransaction();
+  } catch (err) {
+    const error = new HttpError("creating place fail please try again", 500);
+    return next(error);
+  }
 };
 
 exports.createPaint = createPaint;
