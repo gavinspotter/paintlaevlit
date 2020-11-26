@@ -4,6 +4,6 @@ const paintController = require("../controllers/paint-controller");
 
 const router = express.Router();
 
-router.post("/");
+router.post("/", paintController.createPaint);
 
 module.exports = router;
