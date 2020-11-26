@@ -1,8 +1,10 @@
 const mongoose = require("mongoose")
+const HttpError = require("../models/HttpError")
 
 const Receivepaints = require("../models/receivepaints")
 
 const Sendpaints = require("../models/sendpaints")
+
 
 const User = require("../models/user")
 
@@ -40,6 +42,14 @@ const sharePaint = async (req, res, next) => {
         receiver
     })
 
+    let sendingUser
+
+    try {
+        sendingUser = await User.findById(sender)
+    } catch {
+        const error = new HttpError ("couldnt find sender id", 500)
+        return next(error)
+    }
 }
 
 exports.sharePaint = sharePaint
