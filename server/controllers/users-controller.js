@@ -39,8 +39,6 @@ const signup = async (req, res, next) => {
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ra_Barque.jpg",
     password,
     paints: [],
-    foreignpaints: [],
-    paintssent: [],
   });
 
   try {

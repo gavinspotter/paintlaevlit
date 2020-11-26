@@ -8,7 +8,7 @@ const User = require("../models/user");
 const createPaint = async (req, res, next) => {
   const {
     room,
-    roomdimensions,
+
     paintname,
     paintcode,
     paintbrand,
@@ -18,7 +18,7 @@ const createPaint = async (req, res, next) => {
 
   const createdPaint = new Paint({
     room,
-    roomdimensions,
+
     paintname,
     paintcode,
     paintbrand,
@@ -40,16 +40,27 @@ const createPaint = async (req, res, next) => {
     return next(error);
   }
 
+
+
   try {
-    const sess = await mongoose.startSession();
-    sess.startTransaction();
-    await createdPaint.save({ session: sess });
-    user.paints.push(createdPaint);
-    await user.save({ session: sess });
-    await sess.commitTransaction();
+
+    await createdPaint.save();
+    
   } catch (err) {
     const error = new HttpError("creating paint fail please try again", 500);
     return next(error);
+  }
+
+  try {
+    user.paints.push(createdPaint);
+  } catch (error) {
+    
+  }
+
+  try {
+    await user.save()
+  } catch (error) {
+    
   }
 
   res.status(201).json({ paint: createdPaint });
