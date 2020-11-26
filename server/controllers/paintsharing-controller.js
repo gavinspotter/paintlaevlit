@@ -63,7 +63,7 @@ const sharePaint = async (req, res, next) => {
     }
 
     try {
-        
+        sendingUser.
     } catch (error) {
         
     }
