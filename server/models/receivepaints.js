@@ -15,3 +15,5 @@ const receivepaintsSchema = new Schema ({
   receiver: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
 
 })
+
+module.exports = mongoose.model("Receivepaint", receivepaintsSchema)
