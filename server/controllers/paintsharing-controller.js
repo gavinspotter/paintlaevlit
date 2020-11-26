@@ -50,6 +50,29 @@ const sharePaint = async (req, res, next) => {
         const error = new HttpError ("couldnt find sender id", 500)
         return next(error)
     }
+
+    if (!sendingUser) {
+        const error = new HttpError("couldnt find user id", 404)
+        return next(error)
+    }
+
+    try {
+        await sendedPaint.save()
+    } catch (error) {
+        
+    }
+
+    try {
+        
+    } catch (error) {
+        
+    }
+
+    try {
+        
+    } catch (error) {
+        
+    }
 }
 
 exports.sharePaint = sharePaint
