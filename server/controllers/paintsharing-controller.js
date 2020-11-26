@@ -63,16 +63,47 @@ const sharePaint = async (req, res, next) => {
     }
 
     try {
-        sendingUser.
+        sendingUser.sendpaints.push(sendedPaint)
     } catch (error) {
         
     }
 
     try {
-        
+        await sendingUser.save()
     } catch (error) {
         
     }
+
+    let receivingUser
+
+    try {
+        receivingUser = await User.findById(receiver)
+    } catch (error) {
+        
+    }
+
+    if (!receivingUser) {
+        const error = new HttpError("couldnt find user id", 404)
+    }
+
+    try {
+        await receivedPaint.save()
+    } catch (error) {
+        
+    }
+
+    try {
+        receivingUser.receivepaints.push(receivedPaint)
+    } catch (error) {
+        
+    }
+
+    try {
+        await receivingUser.save()
+    } catch (error) {
+        
+    }
+
 }
 
 exports.sharePaint = sharePaint
