@@ -12,7 +12,20 @@ const createPaint = async (req, res, next) => {
     paintcode,
     paintbrand,
     storecode,
+    creator,
   } = req.body;
+
+  const createdPaint = new Paint({
+    room,
+    roomdimensions,
+    paintname,
+    paintcode,
+    paintbrand,
+    storecode,
+    creator,
+  });
+
+  let user;
 };
 
 exports.createPaint = createPaint;
