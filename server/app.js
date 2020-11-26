@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 const userRoutes = require("./routes/users-routes");
 const paintRoutes = require("./routes/paint-routes");
+const paintsharingRoutes = require("./routes/paintsharing-routes")
 const HttpError = require("./models/HttpError");
 
 const app = express();
@@ -16,7 +17,7 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/paints", paintRoutes);
 
-app.use("/api/sharingpaints")
+app.use("/api/sharingpaints", paintsharingRoutes)
 
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
