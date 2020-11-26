@@ -13,5 +13,7 @@ const sendpaintsSchema = new Schema({
   paintbrand: { type: String, trim: true, required: true },
   storecode: { type: String, trim: true, required: true },
   sender: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
-
 })
+
+  
+  module.exports = mongoose.model("Sendpaint", sendpaintsSchema)
