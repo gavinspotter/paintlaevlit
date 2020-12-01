@@ -87,7 +87,19 @@ const createPaint = async (req, res, next) => {
   res.status(201).json({ paint: createdPaint });
 };
 
-const updatePaint = async (req, res, next) => {}
+const updatePaint = async (req, res, next) => {
+
+  const {room,
+    roomdimensions,
+    paintname,
+    paintcode,
+    paintbrand,
+    storecode,}
+}
+
+const deletePaint = async (req, res, next) => {
+  
+}
 
 exports.createPaint = createPaint;
 exports.getPaintsByUserId = getPaintsByUserId
