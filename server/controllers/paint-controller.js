@@ -21,6 +21,8 @@ const getPaintsByUserId = async(req, res, next) => {
     return next(new HttpError("could not find any paints"))
   }
 
+  res.json({paints: paints.map((paint)=> paint.toObject({getters:true}))})
+
 }
 
 const createPaint = async (req, res, next) => {
