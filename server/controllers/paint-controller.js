@@ -16,6 +16,11 @@ const getPaintsByUserId = async(req, res, next) => {
     const error = new HttpError("fetching paints failed, please try again", 500)
     return next(error)
   }
+
+  if (!paints || paints.length === 0) {
+    return next(new HttpError("could not find any paints"))
+  }
+
 }
 
 const createPaint = async (req, res, next) => {
