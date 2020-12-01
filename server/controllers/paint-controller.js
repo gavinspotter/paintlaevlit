@@ -118,6 +118,12 @@ const deletePaint = async (req, res, next) => {
       
     }
 
+    try {
+      await paint.creator.save()
+    } catch (err) {
+      
+    }
+
 }
 
 exports.createPaint = createPaint;
