@@ -10,4 +10,6 @@ router.post("/", paintController.createPaint);
 
 router.patch("/:pid")
 
+router.delete("/:pid")
+
 module.exports = router;
