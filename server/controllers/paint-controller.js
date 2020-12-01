@@ -105,6 +105,12 @@ const deletePaint = async (req, res, next) => {
       return next (error)
       
     }
+
+    try {
+      await paint.remove()
+    } catch (err) {
+      
+    }
   
 }
 
