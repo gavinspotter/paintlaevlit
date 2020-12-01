@@ -1,3 +1,3 @@
 const express = require("express")
 
-const receivedpaintsRouter = require("../routes/receivedpaints-routes")
+const receivedpaintsRouter = require("../controllers/receivedpaints-controller")
