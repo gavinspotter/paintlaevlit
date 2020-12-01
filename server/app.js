@@ -6,6 +6,7 @@ const userRoutes = require("./routes/users-routes");
 const paintRoutes = require("./routes/paint-routes");
 const paintsharingRoutes = require("./routes/paintsharing-routes")
 const sentpaintsRoutes = require("./routes/sentpaints-routes")
+const receivedpaintsRoutes = require("./routes/receivedpaints-routes")
 const HttpError = require("./models/HttpError");
 
 const app = express();
@@ -21,6 +22,8 @@ app.use("/api/paints", paintRoutes);
 app.use("/api/sharingpaints", paintsharingRoutes)
 
 app.use("/api/sentpaints", sentpaintsRoutes)
+
+
 
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
