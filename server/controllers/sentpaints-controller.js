@@ -35,6 +35,10 @@ const deleteSentPaint = async (req, res, next) => {
         const error = new HttpError("could find paint by id", 500)
     }
 
+    if (!journal) {
+        const error = new HttpError("couldnt find paint")
+        return next(error)
+    }
 }
 
 
