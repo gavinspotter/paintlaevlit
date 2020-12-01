@@ -20,6 +20,8 @@ const getSentPaintsByUserId = async (req, res, next) => {
       return next(new HttpError("could not find sent paint"))
   }
 
+  res.json({sentpaint: sentpaint.map((sp)=> sp.toObject({getters: true}))})
+
 }
 
 exports.getSentPaintsByUserId = getSentPaintsByUserId
