@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const userRoutes = require("./routes/users-routes");
 const paintRoutes = require("./routes/paint-routes");
 const paintsharingRoutes = require("./routes/paintsharing-routes")
+const sentpaintsRoutes = require("./routes/sentpaints-routes")
 const HttpError = require("./models/HttpError");
 
 const app = express();
