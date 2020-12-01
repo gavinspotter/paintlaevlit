@@ -95,6 +95,8 @@ const updatePaint = async (req, res, next) => {
 const deletePaint = async (req, res, next) => {
     const paintId = req.params.pid
 
+    let paint 
+    
   
 }
 
