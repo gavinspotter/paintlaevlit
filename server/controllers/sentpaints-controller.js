@@ -24,4 +24,10 @@ const getSentPaintsByUserId = async (req, res, next) => {
 
 }
 
+const deleteSentPaint = async (req, res, next) => {
+    const paintId = req.params.spid
+}
+
+
+
 exports.getSentPaintsByUserId = getSentPaintsByUserId
