@@ -95,7 +95,7 @@ const sharePaint = async (req, res, next) => {
     try {
         receivingUser.receivepaints.push(receivedPaint)
     } catch (error) {
-        
+       
     }
 
     try {
@@ -103,6 +103,8 @@ const sharePaint = async (req, res, next) => {
     } catch (error) {
         
     }
+
+    res.status(201).json({paint: receivedPaint})
 
 }
 

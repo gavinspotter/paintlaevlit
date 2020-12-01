@@ -4,6 +4,6 @@ const paintsharingController = require("../controllers/paintsharing-controller")
 
 const router = express.Router()
 
-router.post("/")
+router.post("/", paintsharingController.sharePaint)
 
 module.exports = router

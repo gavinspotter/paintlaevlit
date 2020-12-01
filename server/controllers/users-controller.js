@@ -20,7 +20,7 @@ const getUsersByUsername = async (req, res, next) => {
 };
 
 const signup = async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { username, name, email, password } = req.body;
 
   let existingUser;
   try {
@@ -34,6 +34,7 @@ const signup = async (req, res, next) => {
   }
 
   const createdUser = new User({
+    username,
     name,
     email,
     image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Ra_Barque.jpg",
@@ -47,6 +48,7 @@ const signup = async (req, res, next) => {
     await createdUser.save();
   } catch (err) {
     const error = new HttpError("signing up failed please try again.", 500);
+    console.log(err)
     return next(error);
   }
 
