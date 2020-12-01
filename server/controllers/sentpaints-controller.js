@@ -7,6 +7,8 @@ const Sentpaint = require("../models/sendpaints")
 const getSentPaintsByUserId = async (req, res, next) => {
     const userId = req.params.uid
 
+    let sentpaint 
+    
   
 
 }
