@@ -96,7 +96,15 @@ const deletePaint = async (req, res, next) => {
     const paintId = req.params.pid
 
     let paint 
-    
+
+    try {
+      paint = await Paint.findById(paintId).populate("creator")
+
+    } catch (err) {
+      const error = new HttpError("couldnt find paint", 500)
+      return next (error)
+      
+    }
   
 }
 
