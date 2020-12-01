@@ -7,3 +7,5 @@ const router = express.Router()
 router.get("/user/:uid")
 
 router.delete("/:rpid")
+
+module.exports = router
