@@ -39,6 +39,12 @@ const deleteSentPaint = async (req, res, next) => {
         const error = new HttpError("couldnt find paint")
         return next(error)
     }
+
+    try {
+        await paint.remove()
+    } catch (err) {
+        
+    }
 }
 
 
