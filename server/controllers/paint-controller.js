@@ -128,3 +128,4 @@ const deletePaint = async (req, res, next) => {
 
 exports.createPaint = createPaint;
 exports.getPaintsByUserId = getPaintsByUserId
+exports.deletePaint = deletePaint
