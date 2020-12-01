@@ -8,7 +8,14 @@ const User = require("../models/user");
 const getPaintsByUserId = async(req, res, next) => {
   const userId = req.params.uid
 
-  
+  let paints
+
+  try {
+    paints = await Paint.find({creator: userId})
+  } catch (err) {
+    const error = new HttpError("fetching paints failed, please try again", 500)
+    return next(error)
+  }
 }
 
 const createPaint = async (req, res, next) => {
