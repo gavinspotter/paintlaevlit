@@ -89,15 +89,12 @@ const createPaint = async (req, res, next) => {
 
 const updatePaint = async (req, res, next) => {
 
-  const {room,
-    roomdimensions,
-    paintname,
-    paintcode,
-    paintbrand,
-    storecode,}
+  
 }
 
 const deletePaint = async (req, res, next) => {
+    const paintId = req.params.pid
+
   
 }
 
