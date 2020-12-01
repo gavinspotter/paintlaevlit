@@ -5,6 +5,12 @@ const HttpError = require("../models/HttpError");
 
 const User = require("../models/user");
 
+const getPaintsByUserId = async(req, res, next) => {
+  const userId = req.params.uid
+
+  
+}
+
 const createPaint = async (req, res, next) => {
   const {
     room,
