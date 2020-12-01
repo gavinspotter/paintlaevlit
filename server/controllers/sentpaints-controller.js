@@ -51,6 +51,14 @@ const deleteSentPaint = async (req, res, next) => {
     } catch (err) {
         
     }
+
+    try {
+        paint.sender.save()
+    } catch (err) {
+        
+    }
+
+    
 }
 
 
