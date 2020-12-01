@@ -17,8 +17,8 @@ const getSentPaintsByUserId = async (req, res, next) => {
   }
 
   if (!sentpaint || sentpaint.length === 0) {
-      return next(new HttpError("could not find sent paint"))
-  }
+    return next(new HttpError("could not find sent paint"))
+}
 
   res.json({sentpaint: sentpaint.map((sp)=> sp.toObject({getters: true}))})
 
