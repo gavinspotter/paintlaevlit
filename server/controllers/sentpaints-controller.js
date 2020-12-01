@@ -45,6 +45,12 @@ const deleteSentPaint = async (req, res, next) => {
     } catch (err) {
         
     }
+
+    try {
+        paint.sender.paints.pull(paint)
+    } catch (err) {
+        
+    }
 }
 
 
