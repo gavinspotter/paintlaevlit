@@ -8,6 +8,6 @@ router.get("/user/:uid")
 
 router.post("/", paintController.createPaint);
 
-
+router.patch("/:pid")
 
 module.exports = router;
