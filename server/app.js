@@ -23,6 +23,7 @@ app.use("/api/sharingpaints", paintsharingRoutes)
 
 app.use("/api/sentpaints", sentpaintsRoutes)
 
+app.use("/api/receivedpaints", receivedpaintsRoutes)
 
 
 app.use((req, res, next) => {
