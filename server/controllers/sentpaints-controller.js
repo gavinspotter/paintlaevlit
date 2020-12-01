@@ -64,3 +64,4 @@ const deleteSentPaint = async (req, res, next) => {
 
 
 exports.getSentPaintsByUserId = getSentPaintsByUserId
+exports.deleteSentPaint = deleteSentPaint
