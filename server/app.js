@@ -20,6 +20,8 @@ app.use("/api/paints", paintRoutes);
 
 app.use("/api/sharingpaints", paintsharingRoutes)
 
+app.use("/api/sentpaints", sentpaintsRoutes)
+
 app.use((req, res, next) => {
   const error = new HttpError("could not find this route", 404);
   throw error;
