@@ -112,6 +112,12 @@ const deletePaint = async (req, res, next) => {
       
     }
   
+    try {
+      paint.creator.paints.pull(paint)
+    } catch (err) {
+      
+    }
+
 }
 
 exports.createPaint = createPaint;
