@@ -4,6 +4,7 @@ const Paint = require("../models/paints");
 const HttpError = require("../models/HttpError");
 
 const User = require("../models/user");
+const { getUsersByUsername } = require("./users-controller");
 
 const getPaintsByUserId = async(req, res, next) => {
   const userId = req.params.uid
@@ -87,3 +88,4 @@ const createPaint = async (req, res, next) => {
 };
 
 exports.createPaint = createPaint;
+exports.getPaintsByUserId = getUsersByUsername
