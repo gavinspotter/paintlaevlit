@@ -29,7 +29,12 @@ const deleteSentPaint = async (req, res, next) => {
 
     let paint 
 
-    
+    try {
+        paint = await Sentpaint.findById(paintId)
+    } catch (err) {
+        const error = new HttpError("could find paint by id", 500)
+    }
+
 }
 
 
