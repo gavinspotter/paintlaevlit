@@ -16,6 +16,10 @@ const getSentPaintsByUserId = async (req, res, next) => {
       return next(error)
   }
 
+  if (!sentpaint || sentpaint.length === 0) {
+      return next(new HttpError("could not find sent paint"))
+  }
+
 }
 
 exports.getSentPaintsByUserId = getSentPaintsByUserId
