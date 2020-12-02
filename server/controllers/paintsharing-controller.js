@@ -104,7 +104,7 @@ const sharePaint = async (req, res, next) => {
         
     }
 
-    res.status(201).json({paint: receivedPaint})
+    res.status(201).json({receivedpaint: receivedPaint, sentpaint: sendedPaint })
 
 }
 

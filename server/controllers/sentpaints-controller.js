@@ -4,6 +4,8 @@ const HttpError = require("../models/HttpError")
 
 const Sentpaint = require("../models/sendpaints")
 
+const User = require("../models/user")
+
 const getSentPaintsByUserId = async (req, res, next) => {
     const userId = req.params.uid
 
@@ -30,12 +32,13 @@ const deleteSentPaint = async (req, res, next) => {
     let paint 
 
     try {
-        paint = await Sentpaint.findById(paintId)
+        paint = await Sentpaint.findById(paintId).populate("sender")
     } catch (err) {
         const error = new HttpError("could find paint by id", 500)
+        return next(error)
     }
 
-    if (!journal) {
+    if (!paint) {
         const error = new HttpError("couldnt find paint")
         return next(error)
     }
@@ -47,13 +50,13 @@ const deleteSentPaint = async (req, res, next) => {
     }
 
     try {
-        paint.sender.paints.pull(paint)
+        paint.sender.sendpaints.pull(paint)
     } catch (err) {
-        
+        console.log(err)
     }
 
     try {
-        paint.sender.save()
+        await paint.sender.save()
     } catch (err) {
         
     }
