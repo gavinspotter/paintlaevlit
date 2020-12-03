@@ -4,7 +4,7 @@ const HttpError = require("../models/HttpError")
 
 const Sentpaint = require("../models/sendpaints")
 
-const User = require("../models/user")
+
 
 const getSentPaintsByUserId = async (req, res, next) => {
     const userId = req.params.uid
