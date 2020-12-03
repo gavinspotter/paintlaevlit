@@ -18,6 +18,7 @@ const getReceivedPaintsByUserId = async (req, res, next) => {
         return next( new HttpError("couldnt find received paint"))
     }
 
+    res.json({receivedpaint: receivedpaint.map((rp)=> rp.toObject({getters:true}))})
 
 }
 
