@@ -90,6 +90,7 @@ const createPaint = async (req, res, next) => {
 const updatePaint = async (req, res, next) => {
 
   
+  
 }
 
 const deletePaint = async (req, res, next) => {
@@ -129,4 +130,5 @@ const deletePaint = async (req, res, next) => {
 
 exports.createPaint = createPaint;
 exports.getPaintsByUserId = getPaintsByUserId
+exports.updatePaint = updatePaint
 exports.deletePaint = deletePaint
