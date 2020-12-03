@@ -38,6 +38,12 @@ const deleteSentPaint = async (req, res, next) => {
         const error = new HttpError("find find paint")
         return next(error)
     }
+
+    try {
+        await paint.remove()
+    } catch (error) {
+        
+    }
     
 }
 
