@@ -4,7 +4,7 @@ const receivedpaintsRouter = require("../controllers/receivedpaints-controller")
 
 const router = express.Router()
 
-router.get("/user/:uid")
+router.get("/user/:uid", receivedpaintsRouter.getReceivedPaintsByUserId)
 
 router.delete("/:rpid")
 
