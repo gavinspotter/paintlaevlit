@@ -31,6 +31,12 @@ const deleteSentPaint = async (req, res, next) => {
         paint = await Receivedpaint.findById(paintId).populate("receiver")
     } catch (err) {
         const error = new HttpError("couldnt find paint by id ", 500)
+        return next(error)
+    }
+
+    if (!paint) {
+        const error = new HttpError("find find paint")
+        return next(error)
     }
     
 }
