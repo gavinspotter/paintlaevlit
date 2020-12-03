@@ -50,6 +50,12 @@ const deleteSentPaint = async (req, res, next) => {
     } catch (err) {
         
     }
+
+    try {
+        await paint.receiver.save()
+    } catch (err) {
+        
+    }
     
 }
 
