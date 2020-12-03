@@ -25,5 +25,5 @@ const getReceivedPaintsByUserId = async (req, res, next) => {
 const deleteSentPaint = async (req, res, next) => {}
 
 
-
+exports.deleteSentPaint = deleteSentPaint
 exports.getReceivedPaintsByUserId = getReceivedPaintsByUserId
