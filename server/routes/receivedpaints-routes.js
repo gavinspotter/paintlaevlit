@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.get("/user/:uid", receivedpaintsRouter.getReceivedPaintsByUserId)
 
-router.delete("/:rpid")
+router.delete("/:rpid", receivedpaintsRouter.deleteSentPaint)
 
 module.exports = router
