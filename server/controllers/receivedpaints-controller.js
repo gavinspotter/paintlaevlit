@@ -8,7 +8,7 @@ const getReceivedPaintsByUserId = async (req, res, next) => {
     let receivedpaint 
 
     try {
-        receivedpaint = await Receivedpaint.find({sender:userId})
+        receivedpaint = await Receivedpaint.find({receiver:userId})
     } catch (err) {
         const error = new HttpError("fetching received paint failed", 500)
         return next(error)
