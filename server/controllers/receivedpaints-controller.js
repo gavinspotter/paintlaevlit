@@ -14,7 +14,10 @@ const getReceivedPaintsByUserId = async (req, res, next) => {
         return next(error)
     }
 
-    
+    if(!receivedpaint || receivedpaint.length === 0){
+        return next( new HttpError("couldnt find received paint"))
+    }
+
 
 }
 
