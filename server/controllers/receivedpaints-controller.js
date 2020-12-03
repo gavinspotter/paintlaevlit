@@ -25,6 +25,7 @@ const getReceivedPaintsByUserId = async (req, res, next) => {
 const deleteSentPaint = async (req, res, next) => {
     const paintId = req.params.rpid
 
+    let paint 
     
 }
 
