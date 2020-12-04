@@ -11,7 +11,7 @@ const sendpaintsSchema = new Schema({
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true },
   paintbrand: { type: String, trim: true},
-  storecode: { type: String, trim: true, required: true },
+  storecode: { type: String, trim: true},
   sender: { type: mongoose.Types.ObjectId, required: true, ref: "User" },
 })
 
