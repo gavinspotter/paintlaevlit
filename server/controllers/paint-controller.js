@@ -17,6 +17,11 @@ const getPaintById = async (req,res,next) => {
     return next(error)
   }
 
+  if (!paint) {
+    const error = new HttpError("couldnt find paint", 404)
+    return next(error)
+  }
+
 }
 
 
