@@ -10,6 +10,13 @@ const getPaintById = async (req,res,next) => {
 
   let paint 
 
+  try {
+    paint = await Paint.findById(paintId)
+  } catch (err) {
+    const error = new HttpError("couldnt find paint by id", 500)
+    return next(error)
+  }
+
 }
 
 
