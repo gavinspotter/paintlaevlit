@@ -5,7 +5,9 @@ const HttpError = require("../models/HttpError");
 
 const User = require("../models/user");
 
-const getPaintById = async (req,res,next) => {}
+const getPaintById = async (req,res,next) => {
+  
+}
 
 
 const getPaintsByUserId = async(req, res, next) => {

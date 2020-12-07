@@ -4,6 +4,8 @@ const paintController = require("../controllers/paint-controller");
 
 const router = express.Router();
 
+router.get("/:pid")
+
 router.get("/user/:uid", paintController.getPaintsByUserId)
 
 router.post("/", paintController.createPaint);
