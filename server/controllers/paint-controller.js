@@ -7,6 +7,9 @@ const User = require("../models/user");
 
 const getPaintById = async (req,res,next) => {
   const paintId = req.params.pid
+
+  let paint 
+
 }
 
 
