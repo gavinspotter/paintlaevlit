@@ -6,7 +6,7 @@ const HttpError = require("../models/HttpError");
 const User = require("../models/user");
 
 const getPaintById = async (req,res,next) => {
-  
+
 }
 
 
@@ -132,6 +132,7 @@ const deletePaint = async (req, res, next) => {
     res.status(200).json({message: "deleted"})
 }
 
+exports.getPaintById = getPaintById
 exports.createPaint = createPaint;
 exports.getPaintsByUserId = getPaintsByUserId
 exports.updatePaint = updatePaint
