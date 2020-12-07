@@ -22,6 +22,8 @@ const getPaintById = async (req,res,next) => {
     return next(error)
   }
 
+  res.json({paint: paint.toObject({getters:true})})
+
 }
 
 
