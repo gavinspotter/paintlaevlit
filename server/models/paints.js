@@ -12,7 +12,8 @@ const paintSchema = new Schema({
     jl: { type: Number},
     il: {type: Number},
     el: {type: Number},
-    axl: {type: Number}
+    axl: {type: Number},
+    cl: {type: Number}
   },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
