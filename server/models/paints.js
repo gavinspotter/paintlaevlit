@@ -10,7 +10,8 @@ const paintSchema = new Schema({
   },
   colorants: {
     jl: { type: Number},
-    il: {type: Number}
+    il: {type: Number},
+    el: {type: Number}
   },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
