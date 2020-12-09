@@ -13,7 +13,8 @@ const paintSchema = new Schema({
     il: {type: Number},
     el: {type: Number},
     axl: {type: Number},
-    cl: {type: Number}
+    cl: {type: Number},
+    rl: {type: Number}
   },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
