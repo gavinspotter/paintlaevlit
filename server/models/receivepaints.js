@@ -8,7 +8,9 @@ const receivepaintsSchema = new Schema ({
     length: {type: Number},
     width: {type: Number}
   },
-  colorants: {type: String},
+  colorants: {
+    jl: {type:Number}
+  },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
   paintbrand: { type: String, trim: true},
