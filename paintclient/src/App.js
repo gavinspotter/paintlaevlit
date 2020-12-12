@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from "react"
+import { Switch, Route } from "react-router-dom"
 
 
 const App = () => {
@@ -14,6 +15,16 @@ const App = () => {
 
   let routes 
   
+  if (isLoggedIn) {
+    routes = (
+      <Switch>
+        <Route path="/" exact>
+
+        </Route>
+      </Switch>
+    )
+  }
+
 
 }
 
