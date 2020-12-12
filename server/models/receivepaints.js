@@ -11,7 +11,8 @@ const receivepaintsSchema = new Schema ({
   colorants: {
     jl: {type:Number},
     il: {type: Number},
-    el: {type: Number}
+    el: {type: Number},
+    axl: {type: Number}
   },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
