@@ -18,7 +18,8 @@ const receivepaintsSchema = new Schema ({
     vl: {type: Number},
     ll: {type: Number},
     dl: {type:Number},
-    yl: {type: Number}
+    yl: {type: Number},
+    tl: {type: Number}
   },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
