@@ -1,5 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 
-const MainNavigation = () => {}
+
+const MainNavigation = () => {
+    const [drawerIsOpen, setDrawerIsOpen] = useState()
+    
+}
 
 export default MainNavigation
