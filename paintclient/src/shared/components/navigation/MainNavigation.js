@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import MainHeader from "./MainHeader"
 import NavLinks from "./NavLinks"
 import SideDrawer from "./SideDrawer"
 
@@ -21,6 +22,15 @@ const MainNavigation = () => {
                     <NavLinks/>
                     </nav> 
             </SideDrawer>
+
+            <MainHeader>
+                <button className="main-navigation__menu-btn" onclick={openDrawerHandler}>
+                    <nav className="main-navigation__header-nav">
+                        <NavLinks/>
+                    </nav>
+                
+                </button>
+            </MainHeader>
         </React.Fragment>
     )
 }
