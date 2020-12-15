@@ -24,6 +24,11 @@ const NavLinks = () => {
                     add paint
                 </NavLink>
             </li>
+            <li>
+                <NavLink to="/auth">
+                login
+                </NavLink>
+            </li>
         </ul>
     )
 
