@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react"
 import { Switch, Route } from "react-router-dom"
+import { AuthContext } from "./shared/context/auth-context"
 
 
 const App = () => {
@@ -13,17 +14,23 @@ const App = () => {
     setIsLoggedIn(false)
   },[])
 
-  let routes 
+  // let routes 
   
-  if (isLoggedIn) {
-    routes = (
-      <Switch>
-        <Route path="/" exact>
+  // if (isLoggedIn) {
+  //   routes = (
+  //     <Switch>
+  //       <Route path="/" exact>
 
-        </Route>
-      </Switch>
-    )
-  }
+  //       </Route>
+  //     </Switch>
+  //   )
+  // }
+
+return (
+  <AuthContext.Provider>
+    
+  </AuthContext.Provider>
+)
 
 
 }
