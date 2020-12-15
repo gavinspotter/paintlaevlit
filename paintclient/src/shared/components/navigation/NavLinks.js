@@ -9,7 +9,11 @@ const NavLinks = () => {
 
     return (
         <ul className="nav-links">
-
+            <li>
+                <NavLink to="/" exact>
+                    my paints
+                </NavLink>
+            </li>
         </ul>
     )
 
