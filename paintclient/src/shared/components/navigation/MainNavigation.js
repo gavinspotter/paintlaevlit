@@ -25,11 +25,12 @@ const MainNavigation = () => {
 
             <MainHeader>
                 <button className="main-navigation__menu-btn" onclick={openDrawerHandler}>
-                    <nav className="main-navigation__header-nav">
-                        <NavLinks/>
-                    </nav>
+                    
                 
                 </button>
+                <nav className="main-navigation__header-nav">
+                        <NavLinks/>
+                    </nav>
             </MainHeader>
         </React.Fragment>
     )
