@@ -30,6 +30,11 @@ const NavLinks = () => {
                 </NavLink>
             </li>
             <li>
+                <NavLink to="/send/new">
+                    send
+                </NavLink>
+            </li>
+            <li>
                 <NavLink to="/auth">
                 login
                 </NavLink>
