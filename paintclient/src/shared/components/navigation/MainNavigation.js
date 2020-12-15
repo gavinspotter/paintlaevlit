@@ -8,6 +8,10 @@ const MainNavigation = () => {
         setDrawerIsOpen(true)
     }
 
+    const closeDrawerHandler = () => {
+        setDrawerIsOpen(false)
+    }
+
     
 }
 
