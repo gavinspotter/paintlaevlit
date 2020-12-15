@@ -14,6 +14,11 @@ const NavLinks = () => {
                     my paints
                 </NavLink>
             </li>
+            <li>
+            <NavLink to={`/${auth.userId}/paints`}>
+            my paints
+             </NavLink>
+            </li>
             
         </ul>
     )
