@@ -14,6 +14,8 @@ const SideDrawer = (props) => {
         <aside className="side-drawer" onClick={props.onClick}>{props.children}</aside>
     </CSSTransition>
     )
+
+    return ReactDOM.createPortal(content, document.getElementById('drawer-hook'));
 }
 
 export default SideDrawer
