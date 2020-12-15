@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react"
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route, Router } from "react-router-dom"
+import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 
 
@@ -27,8 +28,13 @@ const App = () => {
   // }
 
 return (
-  <AuthContext.Provider>
-    
+  <AuthContext.Provider
+  value={{ isLoggedIn: isLoggedIn, login: login, logout: logout}}
+  >
+    <Router>
+      <MainNavigation/>
+    </Router>
+
   </AuthContext.Provider>
 )
 
