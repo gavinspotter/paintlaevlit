@@ -25,6 +25,11 @@ const NavLinks = () => {
                 </NavLink>
             </li>
             <li>
+                <NavLink to={`/${auth.userId}/sent`}>
+                    sent 
+                </NavLink>
+            </li>
+            <li>
                 <NavLink to="/auth">
                 login
                 </NavLink>
