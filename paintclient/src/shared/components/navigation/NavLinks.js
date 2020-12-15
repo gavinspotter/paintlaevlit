@@ -19,7 +19,11 @@ const NavLinks = () => {
             my paints
              </NavLink>
             </li>
-            
+            <li>
+                <NavLink to="/paints/new">
+                    add paint
+                </NavLink>
+            </li>
         </ul>
     )
 
