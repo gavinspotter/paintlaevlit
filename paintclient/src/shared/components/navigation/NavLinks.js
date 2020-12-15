@@ -14,6 +14,7 @@ const NavLinks = () => {
                     my paints
                 </NavLink>
             </li>
+            
         </ul>
     )
 
