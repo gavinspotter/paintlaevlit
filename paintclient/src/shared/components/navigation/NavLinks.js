@@ -9,41 +9,46 @@ const NavLinks = () => {
 
     return (
         <ul className="nav-links">
-            <li>
-                <NavLink to="/" exact>
-                    my paints
-                </NavLink>
-            </li>
-            <li>
+           {auth.isLoggedIn && ( <li>
             <NavLink to={`/${auth.userId}/paints`}>
             my paints
              </NavLink>
-            </li>
-            <li>
+            </li>)}
+           
+            {auth.isLoggedIn && (<li>
                 <NavLink to="/paints/new">
                     add paint
                 </NavLink>
-            </li>
-            <li>
+            </li>)}
+            
+            {auth.isLoggedIn && (<li>
                 <NavLink to={`/${auth.userId}/sent`}>
                     sent 
                 </NavLink>
-            </li>
-            <li>
+            </li>)}
+            
+            {auth.isLoggedIn && (<li>
                 <NavLink to="/send/new">
                     send
                 </NavLink>
-            </li>
-            <li>
+            </li>)}
+            
+            {auth.isLoggedIn && (<li>
                 <NavLink to={`/${auth.userId}/received`}>
                 received
                 </NavLink>
-            </li>
-            <li>
+            </li>)}
+            {!auth.isLoggedIn && (<li>
                 <NavLink to="/auth">
                 login
                 </NavLink>
-            </li>
+            </li>)}
+            {auth.isLoggedIn && (
+                <li>
+                    <button onClick={auth.logout}> logout </button>
+                </li>
+            )}
+            
         </ul>
     )
 
