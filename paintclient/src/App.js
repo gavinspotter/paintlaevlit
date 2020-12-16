@@ -1,7 +1,9 @@
 import React, { useCallback, useState } from "react"
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router,
+Switch, Route } from "react-router-dom"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
+import Auth from "./user/pages/Auth"
 
 
 const App = () => {
@@ -15,17 +17,25 @@ const App = () => {
     setIsLoggedIn(false)
   },[])
 
-  // let routes 
+  let routes 
   
-  // if (isLoggedIn) {
-  //   routes = (
-  //     <Switch>
-  //       <Route path="/" exact>
+  if (isLoggedIn) {
+    routes = (
+      <Switch>
+        <Route>
 
-  //       </Route>
-  //     </Switch>
-  //   )
-  // }
+        </Route>
+      </Switch>
+    )
+  } else {
+    routes = (
+      <Switch>
+        <Route path="/auth">
+          <Auth/>
+        </Route>
+      </Switch>
+    )
+  }
 
 return (
   <AuthContext.Provider
@@ -33,6 +43,7 @@ return (
   >
     <Router>
       <MainNavigation/>
+      
     </Router>
 
   </AuthContext.Provider>
