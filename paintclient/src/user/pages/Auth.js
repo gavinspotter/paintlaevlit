@@ -16,12 +16,14 @@ const Auth = () => {
             <Input
             name="login"
             valRef={register}
-            label="login"
+            label="email"
+            element="input"
             />
             <Input 
             name="password"
             valRef={register}
             label="password"
+            element="input"
             />
             </form>
         </Card>
