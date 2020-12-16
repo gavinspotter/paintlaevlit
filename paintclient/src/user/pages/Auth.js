@@ -11,10 +11,18 @@ const Auth = () => {
 
     return (
         <Card className="authentication">
-            <h2>login</h2>
+            <h2>please login</h2>
             <form>
-            <Input/>
-            <Input/>
+            <Input
+            name="login"
+            valRef={register}
+            label="login"
+            />
+            <Input 
+            name="password"
+            valRef={register}
+            label="password"
+            />
             </form>
         </Card>
     )
