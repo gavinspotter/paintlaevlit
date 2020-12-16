@@ -43,7 +43,7 @@ return (
   >
     <Router>
       <MainNavigation/>
-      
+        <main> {routes}</main>
     </Router>
 
   </AuthContext.Provider>
