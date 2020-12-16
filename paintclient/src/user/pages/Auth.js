@@ -6,6 +6,7 @@ import {AuthContext} from "../../shared/context/auth-context"
 
 const Auth = () => {
     const auth = useContext(AuthContext)
+    const {register, handleSubmit} = useForm()
 
     return (
         <Card className="authentication">
