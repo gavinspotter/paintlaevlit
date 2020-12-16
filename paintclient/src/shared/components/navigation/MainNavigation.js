@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import MainHeader from "./MainHeader"
 import NavLinks from "./NavLinks"
 import SideDrawer from "./SideDrawer"
+import "./MainNavigation.css"
 
 
 const MainNavigation = () => {
@@ -25,8 +26,9 @@ const MainNavigation = () => {
 
             <MainHeader>
                 <button className="main-navigation__menu-btn" onclick={openDrawerHandler}>
-                    
+                    <span/>
                 
+                    <span/> <span/>
                 </button>
                 <nav className="main-navigation__header-nav">
                         <NavLinks/>
