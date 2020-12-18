@@ -27,3 +27,7 @@ const ModalOverlay = (props) => {
 
       return ReactDOM.createPortal(content, document.getElementById("modal-hook"));
 }
+
+const Modal = (props) => {
+    
+}
