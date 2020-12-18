@@ -29,5 +29,7 @@ const ModalOverlay = (props) => {
 }
 
 const Modal = (props) => {
-    
+
 }
+
+export default Modal
