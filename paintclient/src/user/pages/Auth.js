@@ -21,7 +21,7 @@ const Auth = () => {
     return (
         <Card className="authentication">
             <h2>please login</h2>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
             <Input
             name="login"
             valRef={register}
