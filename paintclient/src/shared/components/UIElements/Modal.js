@@ -29,7 +29,11 @@ const ModalOverlay = (props) => {
 }
 
 const Modal = (props) => {
-
+    return (
+        <React.Fragment>
+            
+        </React.Fragment>
+    )
 }
 
 export default Modal
