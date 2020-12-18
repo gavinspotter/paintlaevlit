@@ -13,7 +13,9 @@ const Auth = () => {
 
 
     const onSubmit = (data) => {
-        
+        console.log(data)
+
+        auth.login()
     }
 
     return (
