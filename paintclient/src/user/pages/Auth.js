@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import {useForm} from 'react-hook-form'
+import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 
@@ -8,6 +9,12 @@ import {AuthContext} from "../../shared/context/auth-context"
 const Auth = () => {
     const auth = useContext(AuthContext)
     const {register, handleSubmit} = useForm()
+
+
+
+    const onSubmit = (data) => {
+        
+    }
 
     return (
         <Card className="authentication">
@@ -25,6 +32,7 @@ const Auth = () => {
             label="password"
             element="input"
             />
+            <Button>login</Button>
             </form>
         </Card>
     )
