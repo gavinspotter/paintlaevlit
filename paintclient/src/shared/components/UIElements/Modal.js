@@ -38,7 +38,7 @@ const Modal = (props) => {
         timeout={200}
         classNames="modal"
       >
-        
+        <ModalOverlay {...props} />
       </CSSTransition>
       
     )
