@@ -39,6 +39,7 @@ const Auth = () => {
     }
 
     return (
+        <React.Fragment>
         <Card className="authentication">
             <h2>please login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -57,6 +58,7 @@ const Auth = () => {
             <Button>login</Button>
             </form>
         </Card>
+        </React.Fragment>
     )
 
 }
