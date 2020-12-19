@@ -16,10 +16,26 @@ const Auth = () => {
 
 
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         
+        try {
+            const responseData = await sendRequest(
+                "http://localhost:5000/api/users/login",
+                "POST",
+                JSON.stringify({
+                    email: data.email,
+                    password: data.password
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
+            )
+            auth.login(responseData.user.id)
+        } catch (err) {
+            
+        }
 
-        auth.login()
+        
     }
 
     return (
