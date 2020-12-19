@@ -20,6 +20,7 @@ const Auth = () => {
 
     const onSubmit = async (data) => {
         
+        console.log(data)
         try {
             const responseData = await sendRequest(
                 "http://localhost:5000/api/users/login",
