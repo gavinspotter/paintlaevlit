@@ -6,6 +6,7 @@ const Input = (props) => {
         <input 
         name={props.name}
         ref={props.valRef}
+        type={props.type}
         
         />
     ) : (
