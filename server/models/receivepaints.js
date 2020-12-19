@@ -9,17 +9,50 @@ const receivepaintsSchema = new Schema ({
     width: {type: Number}
   },
   colorants: {
-    jl: {type:Number},
-    il: {type: Number},
-    el: {type: Number},
-    axl: {type: Number},
-    cl: {type: Number},
-    rl: {type: Number},
-    vl: {type: Number},
-    ll: {type: Number},
-    dl: {type:Number},
-    yl: {type: Number},
-    tl: {type: Number}
+    jl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    il: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    el: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    axl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    cl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    rl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    vl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    ll: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    dl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    yl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
+    tl: { 
+      oz: { type: Number},
+      tef: { type: Number} 
+    },
   },
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
