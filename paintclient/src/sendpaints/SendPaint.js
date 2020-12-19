@@ -1,5 +1,5 @@
 import React from "react"
 
-const SentPaint = () => {}
+const SendPaint = () => {}
 
-export default SentPaint
+export default SendPaint
