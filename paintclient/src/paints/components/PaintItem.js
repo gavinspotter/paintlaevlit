@@ -1,5 +1,15 @@
 import React from "react"
 
-const PaintItem = () => {}
+import Card from "../../shared/components/UIElements/Card"
+
+const PaintItem = () => {
+
+
+    return (
+        <li>
+            <Card></Card>
+        </li>
+    )
+}
 
 export default PaintItem
