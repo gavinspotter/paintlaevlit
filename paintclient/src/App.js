@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from "react"
-import { BrowserRouter as Router,
-Switch, Route } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Switch, Route
+} from "react-router-dom"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
@@ -10,18 +12,18 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userId, setUserId] = useState(false)
 
-  const login = useCallback((uid)=> {
+  const login = useCallback((uid) => {
     setIsLoggedIn(true)
     setUserId(uid)
   }, [])
 
-  const logout = useCallback(()=> {
+  const logout = useCallback(() => {
     setIsLoggedIn(false)
     setUserId(null)
-  },[])
+  }, [])
 
-  let routes 
-  
+  let routes
+
   if (isLoggedIn) {
     routes = (
       <Switch>
@@ -34,23 +36,23 @@ const App = () => {
     routes = (
       <Switch>
         <Route path="/auth">
-          <Auth/>
+          <Auth />
         </Route>
       </Switch>
     )
   }
 
-return (
-  <AuthContext.Provider
-  value={{ isLoggedIn: isLoggedIn, userId: userId, login: login, logout: logout}}
-  >
-    <Router>
-      <MainNavigation/>
+  return (
+    <AuthContext.Provider
+      value={{ isLoggedIn: isLoggedIn, userId: userId, login: login, logout: logout }}
+    >
+      <Router>
+        <MainNavigation />
         <main> {routes}</main>
-    </Router>
+      </Router>
 
-  </AuthContext.Provider>
-)
+    </AuthContext.Provider>
+  )
 
 
 }
