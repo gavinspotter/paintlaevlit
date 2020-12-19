@@ -4,6 +4,7 @@ import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import {AuthContext} from "../../shared/context/auth-context"
 import {useHttpClient} from "../../shared/hooks/http-hook"
@@ -43,6 +44,7 @@ const Auth = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError}/>
         <Card className="authentication">
+            {isLoading && <LoadingSpinner asOverlay/>}
             <h2>please login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
             <Input
