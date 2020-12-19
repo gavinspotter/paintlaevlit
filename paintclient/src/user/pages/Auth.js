@@ -9,6 +9,9 @@ import {useHttpClient} from "../../shared/hooks/http-hook"
 
 const Auth = () => {
     const auth = useContext(AuthContext)
+
+    const {isLoading, error, sendRequest, clearError} = useHttpClient()
+
     const {register, handleSubmit} = useForm()
 
 
