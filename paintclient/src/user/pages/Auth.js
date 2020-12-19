@@ -5,6 +5,7 @@ import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 
 import {AuthContext} from "../../shared/context/auth-context"
+import {useHttpClient} from "../../shared/hooks/http-hook"
 
 const Auth = () => {
     const auth = useContext(AuthContext)
@@ -13,7 +14,7 @@ const Auth = () => {
 
 
     const onSubmit = (data) => {
-        console.log(data)
+        
 
         auth.login()
     }
