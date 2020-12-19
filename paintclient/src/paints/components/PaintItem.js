@@ -8,6 +8,10 @@ const PaintItem = () => {
     const {isLoading, error, sendRequest, clearError} = useHttpClient()
 
 
+    const confirmDeleteHandler = async () => {
+        
+    }
+
     return (
         <li>
             <Card></Card>
