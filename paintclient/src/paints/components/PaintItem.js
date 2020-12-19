@@ -7,7 +7,7 @@ const PaintItem = () => {
 
     const {isLoading, error, sendRequest, clearError} = useHttpClient()
 
-    const [showConfirmModal, setShowConfirmModal] = useState()
+    const [showConfirmModal, setShowConfirmModal] = useState(false)
 
 
     const confirmDeleteHandler = async () => {
