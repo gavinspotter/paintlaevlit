@@ -5,6 +5,8 @@ import {useHttpClient} from "../../shared/hooks/http-hook"
 
 const PaintItem = () => {
 
+    const {isLoading, error, sendRequest, clearError} = useHttpClient()
+
 
     return (
         <li>
