@@ -3,6 +3,7 @@ import {useForm} from 'react-hook-form'
 import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 
 import {AuthContext} from "../../shared/context/auth-context"
 import {useHttpClient} from "../../shared/hooks/http-hook"
@@ -40,6 +41,7 @@ const Auth = () => {
 
     return (
         <React.Fragment>
+            <ErrorModal error={error} onClear={clearError}/>
         <Card className="authentication">
             <h2>please login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
