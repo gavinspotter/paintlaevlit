@@ -25,7 +25,7 @@ const Auth = () => {
                 "http://localhost:5000/api/users/login",
                 "POST",
                 JSON.stringify({
-                    email: data.email,
+                    email: data.login,
                     password: data.password
                 }),
                 {
