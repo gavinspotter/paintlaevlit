@@ -12,7 +12,7 @@ const ErrorModal = props => {
       show={!!props.error}
       footer={<Button onClick={props.onClear}> okay </Button>}
         >
-            
+            <p>{props.error}</p>
         </Modal>
     )
 }
