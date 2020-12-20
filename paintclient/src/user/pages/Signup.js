@@ -38,7 +38,11 @@ const Signup = () => {
                     />
 
                     <Input
-
+                        name="password"
+                        valRef={register}
+                        label="password"
+                        element="input"
+                        type="password"
                     />
                 </form>
             </Card>
