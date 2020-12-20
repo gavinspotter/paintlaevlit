@@ -19,14 +19,33 @@ const Signup = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
-    const onSubmit = async () => { }
+    const onSubmit = async (data) => {
+
+        try {
+            const responseData = await sendRequest(
+                "http://localhost:5000/api/users/signup",
+                "POST",
+                JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    password: data.password
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
+            )
+            auth.login(responseData.user.id)
+        } catch (err) {
+
+        }
+    }
 
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <Card>
                 {isLoading && <LoadingSpinner asOverylay />}
-                <form onSubmit={handleSubmit()}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
                         name="name"
                         valRef={register}
