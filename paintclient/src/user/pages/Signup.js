@@ -6,6 +6,7 @@ import Card from "../../shared/components/UIElements/Card"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
+import Input from "../../shared/components/FormElements/Input"
 
 
 const Signup = () => {
@@ -19,6 +20,11 @@ const Signup = () => {
             <ErrorModal error={error} onClear={clearError} />
             <Card>
                 {isLoading && <LoadingSpinner asOverylay />}
+                <Input
+
+                />
+                <Input />
+                <Input />
             </Card>
         </React.Fragment>
     )
