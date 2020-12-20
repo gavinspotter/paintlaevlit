@@ -9,6 +9,7 @@ const Signup = () => {
 
     const auth = useContext(AuthContext)
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
 }
 
 export default Signup 
