@@ -25,15 +25,21 @@ const Signup = () => {
                 {isLoading && <LoadingSpinner asOverylay />}
                 <form>
                     <Input
+                        name="name"
+                        valRef={register}
+                        label="name"
+                        element="input"
+                    />
+                    <Input
                         name="email"
                         valRef={register}
                         label="email"
                         element="input"
                     />
+
                     <Input
 
                     />
-                    <Input />
                 </form>
             </Card>
         </React.Fragment>
