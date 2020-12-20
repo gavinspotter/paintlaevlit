@@ -23,11 +23,13 @@ const Signup = () => {
             <ErrorModal error={error} onClear={clearError} />
             <Card>
                 {isLoading && <LoadingSpinner asOverylay />}
-                <Input
+                <form>
+                    <Input
 
-                />
-                <Input />
-                <Input />
+                    />
+                    <Input />
+                    <Input />
+                </form>
             </Card>
         </React.Fragment>
     )
