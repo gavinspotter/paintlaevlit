@@ -25,9 +25,14 @@ const Signup = () => {
                 {isLoading && <LoadingSpinner asOverylay />}
                 <form>
                     <Input
+                        name="email"
+                        valRef={register}
+                        label="email"
+                        element="input"
+                    />
+                    <Input
 
                     />
-                    <Input />
                     <Input />
                 </form>
             </Card>
