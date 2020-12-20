@@ -9,9 +9,12 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Input from "../../shared/components/FormElements/Input"
 
 
+
 const Signup = () => {
 
     const auth = useContext(AuthContext)
+
+    const { register, handleSubmit } = useForm()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
