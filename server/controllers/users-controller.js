@@ -20,7 +20,7 @@ const getUsersByUsername = async (req, res, next) => {
 };
 
 const signup = async (req, res, next) => {
-  const { username, name, email, password } = req.body;
+  const { name, email, password } = req.body;
 
   let existingUser;
   try {
@@ -34,7 +34,6 @@ const signup = async (req, res, next) => {
   }
 
   const createdUser = new User({
-    username,
     name,
     email,
     password,
