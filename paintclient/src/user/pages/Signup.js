@@ -7,6 +7,7 @@ import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Input from "../../shared/components/FormElements/Input"
+import Button from "../../shared/components/FormElements/Button"
 
 
 
@@ -18,12 +19,14 @@ const Signup = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+    const onSubmit = async () => { }
+
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <Card>
                 {isLoading && <LoadingSpinner asOverylay />}
-                <form>
+                <form onSubmit={handleSubmit()}>
                     <Input
                         name="name"
                         valRef={register}
@@ -44,6 +47,9 @@ const Signup = () => {
                         element="input"
                         type="password"
                     />
+                    <Button>
+                        submit
+                    </Button>
                 </form>
             </Card>
         </React.Fragment>
