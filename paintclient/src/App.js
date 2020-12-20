@@ -6,6 +6,7 @@ import {
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
+import Signup from "./user/pages/Signup"
 
 
 const App = () => {
@@ -37,6 +38,9 @@ const App = () => {
       <Switch>
         <Route path="/auth">
           <Auth />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
       </Switch>
     )
