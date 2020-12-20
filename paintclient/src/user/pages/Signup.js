@@ -10,6 +10,13 @@ const Signup = () => {
     const auth = useContext(AuthContext)
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
+    return (
+        <React.Fragment>
+
+        </React.Fragment>
+    )
+
 }
 
 export default Signup 
