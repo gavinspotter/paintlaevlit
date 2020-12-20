@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const receivepaintsSchema = new Schema ({
-    room: { type: String, trim: true},
+  room: { type: String, trim: true},
   roomdimensions: {
     length: {type: Number},
     width: {type: Number}
