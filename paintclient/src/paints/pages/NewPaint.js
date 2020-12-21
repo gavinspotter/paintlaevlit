@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { useHistory } from "react-router-dom"
+import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
@@ -37,6 +38,11 @@ const NewPaint = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
+            <Card>
+                <form onSubmit={ }>
+
+                </form>
+            </Card>
         </React.Fragment>
     )
 
