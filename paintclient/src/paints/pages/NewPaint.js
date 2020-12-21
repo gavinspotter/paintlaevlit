@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { useHistory } from "react-router-dom"
+import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
@@ -34,6 +35,7 @@ const NewPaint = () => {
                     "Content-Type": "application:json"
                 }
             )
+            history.push("/newpaint")
         } catch (err) {
 
         }
@@ -45,6 +47,33 @@ const NewPaint = () => {
             <Card>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {isLoading && <LoadingSpinner asOverlay />}
+                    <Input
+                        name="paintname"
+                        valRef={register}
+                        label="name"
+                        element="input"
+                    />
+                    <Input
+                        name="width"
+                        valRef={register}
+                        label="wall width"
+                        element="input"
+                        type="number"
+                    />
+                    <Input
+                        name="height"
+                        valRef={register}
+                        label="wall height"
+                        element="input"
+                        type="number"
+                    />
+                    <Input
+                        name="paintname"
+                        valRef={register}
+                        label="number of walls"
+                        element="input"
+                        type="number"
+                    />
                 </form>
             </Card>
         </React.Fragment>

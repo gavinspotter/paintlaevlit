@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch, Route
 } from "react-router-dom"
+import NewPaint from "./paints/pages/NewPaint"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
@@ -28,8 +29,8 @@ const App = () => {
   if (isLoggedIn) {
     routes = (
       <Switch>
-        <Route>
-
+        <Route path="/newpaint">
+          <NewPaint />
         </Route>
       </Switch>
     )
