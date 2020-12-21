@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { useHistory } from "react-router-dom"
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
@@ -35,7 +36,7 @@ const NewPaint = () => {
 
     return (
         <React.Fragment>
-
+            <ErrorModal error={error} onClear={clearError} />
         </React.Fragment>
     )
 
