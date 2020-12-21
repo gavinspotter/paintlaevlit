@@ -42,7 +42,7 @@ const NewPaint = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <Card>
-                <form onSubmit={ }>
+                <form onSubmit={handleSubmit(onSubmit)}>
 
                 </form>
             </Card>
