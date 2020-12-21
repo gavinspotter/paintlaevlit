@@ -50,6 +50,7 @@ const getPaintsByUserId = async(req, res, next) => {
 const createPaint = async (req, res, next) => {
   const {
     room,
+    colorants,
     roomdimensions,
     paintname,
     paintcode,
@@ -60,6 +61,7 @@ const createPaint = async (req, res, next) => {
 
   const createdPaint = new Paint({
     room,
+    colorants,
     roomdimensions,
     paintname,
     paintcode,
