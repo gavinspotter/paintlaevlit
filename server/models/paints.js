@@ -6,7 +6,8 @@ const paintSchema = new Schema({
   room: { type: String, trim: true},
   roomdimensions: {
     length: {type: Number},
-    width: {type: Number}
+    width: {type: Number},
+    walls: {type: Number}
   },
   colorants: {
     jl: { 

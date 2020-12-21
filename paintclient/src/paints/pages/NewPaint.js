@@ -10,7 +10,22 @@ const NewPaint = () => {
 
     const onSubmit = async (data) => {
         try {
-
+            await sendRequest(
+                "http://localhost:5000/api/paints",
+                "POST",
+                JSON.stringify({
+                    paintname: data.paintname,
+                    roomdimensions: {
+                        length: data.length,
+                        width: data.width,
+                        walls: data.walls
+                    },
+                    creator: auth.userId
+                }),
+                {
+                    "Content-Type": "application:json"
+                }
+            )
         } catch (err) {
 
         }
