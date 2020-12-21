@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { useForm } from 'react-hook-form'
+import { Link } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
@@ -60,6 +61,7 @@ const Auth = () => {
                         label="password"
                         element="input"
                     />
+                    did you mean to <Link to="/signup"> signup </Link> <br />
                     <Button>login</Button>
                 </form>
             </Card>
