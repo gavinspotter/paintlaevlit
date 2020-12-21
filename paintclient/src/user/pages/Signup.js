@@ -66,7 +66,7 @@ const Signup = () => {
                         element="input"
                         type="password"
                     />
-                    <Button>
+                    <Button type="submit">
                         submit
                     </Button>
                 </form>

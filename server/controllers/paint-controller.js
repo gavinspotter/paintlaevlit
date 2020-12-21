@@ -91,8 +91,8 @@ const createPaint = async (req, res, next) => {
     await createdPaint.save();
     
   } catch (err) {
-    const error = new HttpError("creating paint fail please try again", 500);
-    return next(error);
+    // const error = new HttpError("creating paint fail please try again", 500);
+    // return next(error);
   }
 
   try {

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react"
+import React, { useState, useCallback } from "react"
 import {
   BrowserRouter as Router,
   Switch, Route
@@ -29,7 +29,7 @@ const App = () => {
   if (isLoggedIn) {
     routes = (
       <Switch>
-        <Route path="/newpaint">
+        <Route path="/paints/new">
           <NewPaint />
         </Route>
       </Switch>

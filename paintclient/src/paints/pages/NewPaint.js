@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { useForm } from "react-hook-form"
 import { useHistory } from "react-router-dom"
+import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
@@ -24,11 +25,11 @@ const NewPaint = () => {
                 "POST",
                 JSON.stringify({
                     paintname: data.paintname,
-                    roomdimensions: {
-                        length: data.length,
-                        width: data.width,
-                        walls: data.walls
-                    },
+                    // roomdimensions: {
+                    //     length: data.length,
+                    //     width: data.width,
+                    //     walls: data.walls
+                    // },
                     creator: auth.userId
                 }),
                 {
@@ -37,7 +38,7 @@ const NewPaint = () => {
             )
             history.push("/newpaint")
         } catch (err) {
-
+            console.log(err)
         }
     }
 
@@ -74,6 +75,7 @@ const NewPaint = () => {
                         element="input"
                         type="number"
                     />
+                    <Button> submit </Button>
                 </form>
             </Card>
         </React.Fragment>

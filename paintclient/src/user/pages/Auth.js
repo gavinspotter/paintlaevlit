@@ -19,28 +19,28 @@ const Auth = () => {
 
 
 
-    const onSubmit = async (data) => {
+    // const onSubmit = async (data) => {
 
 
-        try {
-            const responseData = await sendRequest(
-                "http://localhost:5000/api/users/login",
-                "POST",
-                JSON.stringify({
-                    email: data.login,
-                    password: data.password
-                }),
-                {
-                    "Content-Type": "application/json"
-                }
-            )
-            auth.login(responseData.user.id)
-        } catch (err) {
+    //     try {
+    //         const responseData = await sendRequest(
+    //             "http://localhost:5000/api/users/login",
+    //             "POST",
+    //             JSON.stringify({
+    //                 email: data.login,
+    //                 password: data.password
+    //             }),
+    //             {
+    //                 "Content-Type": "application/json"
+    //             }
+    //         )
+    //         auth.login(responseData.user.id)
+    //     } catch (err) {
 
-        }
+    //     }
 
 
-    }
+    // }
 
     return (
         <React.Fragment>
@@ -62,7 +62,7 @@ const Auth = () => {
                         element="input"
                     />
                     did you mean to <Link to="/signup"> signup </Link> <br />
-                    <Button>login</Button>
+                    <Button type="submit">login</Button>
                 </form>
             </Card>
         </React.Fragment>
