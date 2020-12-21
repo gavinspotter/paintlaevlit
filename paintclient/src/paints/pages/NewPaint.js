@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { useForm } from "react-hook-form"
 import { useHistory } from "react-router-dom"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
@@ -7,6 +8,8 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const NewPaint = () => {
     const auth = useContext(AuthContext)
+
+    const { register, handleSubmit } = useForm()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
