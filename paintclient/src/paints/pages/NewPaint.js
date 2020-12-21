@@ -8,6 +8,8 @@ const NewPaint = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+    const history = useHistory()
+
     const onSubmit = async (data) => {
         try {
             await sendRequest(
