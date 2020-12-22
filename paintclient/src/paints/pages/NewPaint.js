@@ -8,6 +8,7 @@ import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import "./PaintForm.css"
 
 const NewPaint = () => {
     const auth = useContext(AuthContext)
@@ -83,6 +84,15 @@ const NewPaint = () => {
                         element="input"
                         type="number"
                     />
+
+                    <Input
+                        name="room"
+                        valRef={register}
+                        label="room"
+                        element="input"
+
+                    />
+
                     <Button> submit </Button>
                 </form>
             </Card>
