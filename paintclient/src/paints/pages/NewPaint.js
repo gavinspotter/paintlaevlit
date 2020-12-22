@@ -25,15 +25,15 @@ const NewPaint = () => {
                 "POST",
                 JSON.stringify({
                     paintname: data.paintname,
-                    // roomdimensions: {
-                    //     length: data.length,
-                    //     width: data.width,
-                    //     walls: data.walls
-                    // },
+                    roomdimensions: {
+                        length: data.length,
+                        width: data.width,
+                        walls: data.walls
+                    },
                     creator: auth.userId
                 }),
                 {
-                    "Content-Type": "application:json"
+                    "Content-Type": "application/json"
                 }
             )
             history.push("/newpaint")
