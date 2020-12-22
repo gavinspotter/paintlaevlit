@@ -33,6 +33,10 @@ const Auth = () => {
         false
     );
 
+    const paintSubmitHandler = async (event) => {
+
+    }
+
 
     // const onSubmit = async (data) => {
 
