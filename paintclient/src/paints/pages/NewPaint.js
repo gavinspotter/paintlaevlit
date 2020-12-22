@@ -93,6 +93,13 @@ const NewPaint = () => {
 
                     />
 
+                    <Input
+                        name="storecode"
+                        valRef={register}
+                        label="store code"
+                        element="input"
+                    />
+
                     <Button> submit </Button>
                 </form>
             </Card>
