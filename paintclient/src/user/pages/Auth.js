@@ -34,7 +34,24 @@ const Auth = () => {
     );
 
     const paintSubmitHandler = async (event) => {
+        event.preventDefault()
+        try {
+            const responseData = await sendRequest(
+                "http://localhost:5000/api/users/login",
+                "POST",
+                JSON.stringify({
+                    email: formState.inputs.email.value,
+                    password: formState.inputs.password.value
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
+            )
+            auth.login(responseData.user.id)
 
+        } catch (err) {
+
+        }
     }
 
 
@@ -84,7 +101,7 @@ const Auth = () => {
                     <Button type="submit">login</Button>
                 </form> */}
 
-                <form>
+                <form onSubmit={paintSubmitHandler}>
                     <Formhookinput
                         id="email"
                         element="input"
