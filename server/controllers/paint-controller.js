@@ -56,6 +56,7 @@ const createPaint = async (req, res, next) => {
     paintcode,
     paintbrand,
     storecode,
+    base,
     creator,
   } = req.body;
 
@@ -67,6 +68,7 @@ const createPaint = async (req, res, next) => {
     paintcode,
     paintbrand,
     storecode,
+    base,
     creator,
   });
 

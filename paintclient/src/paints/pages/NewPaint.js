@@ -33,6 +33,8 @@ const NewPaint = () => {
                     },
                     paintcode: data.paintcode,
                     storecode: data.storecode,
+                    paintbrand: data.paintbrand,
+                    base: data.base,
                     room: data.room,
                     creator: auth.userId
                 }),
