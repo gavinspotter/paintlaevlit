@@ -30,8 +30,8 @@ const NewPaint = () => {
                         width: data.width,
                         walls: data.walls
                     },
-                    paintcode:
-                        creator: auth.userId
+                    paintcode: data.paintcode,
+                    creator: auth.userId
                 }),
                 {
                     "Content-Type": "application/json"
@@ -73,6 +73,13 @@ const NewPaint = () => {
                         name="walls"
                         valRef={register}
                         label="number of walls"
+                        element="input"
+                        type="number"
+                    />
+                    <Input
+                        name="paintcode"
+                        valRef={register}
+                        label="paint code"
                         element="input"
                         type="number"
                     />
