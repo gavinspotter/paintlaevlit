@@ -58,6 +58,30 @@ const NewPaint = () => {
                         label="name"
                         element="input"
                     />
+
+                    <Input
+                        name="paintcode"
+                        valRef={register}
+                        label="paint code"
+                        element="input"
+                        type="number"
+                    />
+
+                    <Input
+                        name="paintbrand"
+                        valRef={register}
+                        label="brand"
+                        element="input"
+                    />
+
+                    <Input
+                        name="room"
+                        valRef={register}
+                        label="room"
+                        element="input"
+
+                    />
+
                     <Input
                         name="width"
                         valRef={register}
@@ -79,21 +103,9 @@ const NewPaint = () => {
                         element="input"
                         type="number"
                     />
-                    <Input
-                        name="paintcode"
-                        valRef={register}
-                        label="paint code"
-                        element="input"
-                        type="number"
-                    />
 
-                    <Input
-                        name="room"
-                        valRef={register}
-                        label="room"
-                        element="input"
 
-                    />
+
 
                     <Input
                         name="storecode"
@@ -101,6 +113,8 @@ const NewPaint = () => {
                         label="store code"
                         element="input"
                     />
+
+
 
                     <Button> submit </Button>
                 </form>
