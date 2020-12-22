@@ -32,6 +32,8 @@ const NewPaint = () => {
                         walls: data.walls
                     },
                     paintcode: data.paintcode,
+                    storecode: data.storecode,
+                    room: data.room,
                     creator: auth.userId
                 }),
                 {

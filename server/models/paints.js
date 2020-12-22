@@ -55,6 +55,7 @@ const paintSchema = new Schema({
       tef: { type: Number} 
     },
   },
+  base: {type: String, trim: true},
   paintname: { type: String, trim: true, required: true },
   paintcode: { type: String, trim: true},
   paintbrand: { type: String, trim: true },
