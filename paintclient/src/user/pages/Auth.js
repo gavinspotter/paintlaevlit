@@ -87,7 +87,12 @@ const Auth = () => {
                         label="email"
                         onInput={inputHandler}
                     />
-                    <Formhookinput />
+                    <Formhookinput
+                        id="password"
+                        element="input"
+                        label="password"
+                        onInput={inputHandler}
+                    />
                     <Button type="submit"> submit </Button>
                 </form>
 
