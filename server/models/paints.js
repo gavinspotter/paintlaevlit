@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const paintSchema = new Schema({
   room: { type: String, trim: true},
   roomdimensions: {
-    length: {type: Number},
+    height: {type: Number},
     width: {type: Number},
     walls: {type: Number}
   },

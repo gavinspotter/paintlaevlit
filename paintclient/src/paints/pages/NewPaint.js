@@ -69,7 +69,7 @@ const NewPaint = () => {
                         type="number"
                     />
                     <Input
-                        name="paintname"
+                        name="walls"
                         valRef={register}
                         label="number of walls"
                         element="input"
