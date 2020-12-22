@@ -64,13 +64,19 @@ const NewPaint = () => {
                         valRef={register}
                         label="paint code"
                         element="input"
-                        type="number"
                     />
 
                     <Input
                         name="paintbrand"
                         valRef={register}
                         label="brand"
+                        element="input"
+                    />
+
+                    <Input
+                        name="base"
+                        valRef={register}
+                        label="paint base"
                         element="input"
                     />
 
