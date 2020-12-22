@@ -26,7 +26,7 @@ const NewPaint = () => {
                 JSON.stringify({
                     paintname: data.paintname,
                     roomdimensions: {
-                        length: data.length,
+                        height: data.height,
                         width: data.width,
                         walls: data.walls
                     },
