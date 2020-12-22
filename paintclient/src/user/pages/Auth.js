@@ -1,7 +1,9 @@
 import React, { useContext } from "react"
-import { useForm } from 'react-hook-form'
+// import { useForm } from 'react-hook-form'
+import { useForm } from "../../shared/hooks/form-hook";
 import { Link } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
+import Formhookinput from "../../shared/components/FormElements/Formhookinput"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
@@ -15,8 +17,21 @@ const Auth = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
-    const { register, handleSubmit } = useForm()
+    // const { register, handleSubmit } = useForm()
 
+    const [formState, inputHandler] = useForm(
+        {
+            email: {
+                value: "",
+                isValid: false,
+            },
+            password: {
+                value: "",
+                isValid: false,
+            },
+        },
+        false
+    );
 
 
     // const onSubmit = async (data) => {
@@ -48,7 +63,7 @@ const Auth = () => {
             <Card className="authentication">
                 {isLoading && <LoadingSpinner asOverlay />}
                 <h2>please login</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                {/* <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
                         name="login"
                         valRef={register}
@@ -63,7 +78,19 @@ const Auth = () => {
                     />
                     did you mean to <Link to="/signup"> signup </Link> <br />
                     <Button type="submit">login</Button>
+                </form> */}
+
+                <form>
+                    <Formhookinput
+                        id="email"
+                        element="input"
+                        label="email"
+                        onInput={inputHandler}
+                    />
+                    <Formhookinput />
+                    <Button type="submit"> submit </Button>
                 </form>
+
             </Card>
         </React.Fragment>
     )
