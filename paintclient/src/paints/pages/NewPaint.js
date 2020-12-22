@@ -30,7 +30,8 @@ const NewPaint = () => {
                         width: data.width,
                         walls: data.walls
                     },
-                    creator: auth.userId
+                    paintcode:
+                        creator: auth.userId
                 }),
                 {
                     "Content-Type": "application/json"
