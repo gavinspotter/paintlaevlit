@@ -32,6 +32,9 @@ const PaintItem = (props) => {
                     <div>
                         {props.base}
                     </div>
+                    <div>
+                        {props.room}
+                    </div>
                 </div>
             </Card>
         </li>
