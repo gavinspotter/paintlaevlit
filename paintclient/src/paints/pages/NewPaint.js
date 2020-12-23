@@ -26,11 +26,11 @@ const NewPaint = () => {
                 "POST",
                 JSON.stringify({
                     paintname: data.paintname,
-                    roomdimensions: {
-                        height: data.height,
-                        width: data.width,
-                        walls: data.walls
-                    },
+                    // roomdimensions: {
+                    //     height: data.height,
+                    //     width: data.width,
+                    //     walls: data.walls
+                    // },
                     paintcode: data.paintcode,
                     storecode: data.storecode,
                     paintbrand: data.paintbrand,
@@ -90,7 +90,7 @@ const NewPaint = () => {
 
                     />
 
-                    <Input
+                    {/* <Input
                         name="width"
                         valRef={register}
                         label="wall width"
@@ -110,7 +110,7 @@ const NewPaint = () => {
                         label="number of walls"
                         element="input"
                         type="number"
-                    />
+                    /> */}
 
 
 
