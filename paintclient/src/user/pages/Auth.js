@@ -19,19 +19,6 @@ const Auth = () => {
 
     const { register, handleSubmit } = useForm()
 
-    // const [formState, inputHandler] = useForm(
-    //     {
-    //         email: {
-    //             value: "",
-    //             isValid: false,
-    //         },
-    //         password: {
-    //             value: "",
-    //             isValid: false,
-    //         },
-    //     },
-    //     false
-    // );
 
 
 
