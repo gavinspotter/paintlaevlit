@@ -26,6 +26,9 @@ const PaintItem = (props) => {
                     <div>
                         {props.paintcode}
                     </div>
+                    <div>
+                        {props.paintbrand}
+                    </div>
                 </div>
             </Card>
         </li>
