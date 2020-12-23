@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Button from "../../shared/components/FormElements/Button"
 
 import Card from "../../shared/components/UIElements/Card"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
@@ -32,10 +33,12 @@ const PaintItem = (props) => {
                     <div>
                         {props.base}
                     </div>
-                    <div>
+                    {/* <div>
                         {props.room}
-                    </div>
+                    </div> */}
                 </div>
+                <Button> edit </Button>
+                <Button> delete </Button>
             </Card>
         </li>
     )

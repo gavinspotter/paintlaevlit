@@ -35,7 +35,7 @@ const NewPaint = () => {
                     storecode: data.storecode,
                     paintbrand: data.paintbrand,
                     base: data.base,
-                    room: data.room,
+                    // room: data.room,
                     creator: auth.userId
                 }),
                 {
@@ -82,13 +82,13 @@ const NewPaint = () => {
                         element="input"
                     />
 
-                    <Input
+                    {/* <Input
                         name="room"
                         valRef={register}
                         label="room"
                         element="input"
 
-                    />
+                    /> */}
 
                     {/* <Input
                         name="width"
