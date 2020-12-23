@@ -4,7 +4,7 @@ import Card from "../../shared/components/UIElements/Card"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
-const PaintItem = () => {
+const PaintItem = (props) => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
@@ -19,6 +19,11 @@ const PaintItem = () => {
         <li>
             <Card>
                 {isLoading && <LoadingSpinner asOverlay />}
+                <div>
+                    <div>
+                        {props.paintname}
+                    </div>
+                </div>
             </Card>
         </li>
     )
