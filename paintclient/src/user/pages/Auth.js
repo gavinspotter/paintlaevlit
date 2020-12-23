@@ -33,26 +33,7 @@ const Auth = () => {
     //     false
     // );
 
-    // const paintSubmitHandler = async (event) => {
-    //     event.preventDefault()
-    //     try {
-    //         const responseData = await sendRequest(
-    //             "http://localhost:5000/api/users/login",
-    //             "POST",
-    //             JSON.stringify({
-    //                 email: formState.inputs.email.value,
-    //                 password: formState.inputs.password.value
-    //             }),
-    //             {
-    //                 "Content-Type": "application/json"
-    //             }
-    //         )
-    //         auth.login(responseData.user.id)
 
-    //     } catch (err) {
-
-    //     }
-    // }
 
 
     const onSubmit = async (data) => {
