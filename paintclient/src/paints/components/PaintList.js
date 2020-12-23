@@ -1,6 +1,7 @@
 import React from "react"
 
 import Button from "../../shared/components/FormElements/Button"
+import "./PaintList.css"
 
 const PaintList = (props) => {
 
@@ -12,6 +13,12 @@ const PaintList = (props) => {
             </div>
         )
     }
+
+    return (
+        <ul className="paint-list">
+
+        </ul>
+    )
 
 
 }
