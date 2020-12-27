@@ -13,6 +13,8 @@ const PaintItem = (props) => {
 
 
     const confirmDeleteHandler = async () => {
+        setShowConfirmModal(false);
+
 
     }
 
