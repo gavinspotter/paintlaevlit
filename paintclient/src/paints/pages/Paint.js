@@ -4,6 +4,7 @@ import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import PaintList from "../components/PaintList"
 
 
 const Paint = () => {
@@ -20,7 +21,7 @@ const Paint = () => {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/paints/user/${userId}`
                 )
-                setLoadedPaint(responseData.paint)
+                setLoadedPaint(responseData.paints)
             } catch (err) {
 
             }
@@ -37,6 +38,7 @@ const Paint = () => {
                     <LoadingSpinner />
                 </div>
             )}
+            {!isLoading && loadedPaint && <PaintList items={loadedPaint} />}
         </React.Fragment>
     )
 }
