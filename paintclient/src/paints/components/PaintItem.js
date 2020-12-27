@@ -17,7 +17,7 @@ const PaintItem = (props) => {
     }
 
     return (
-        <li>
+        <li className="paint-list-item">
             <Card>
                 {isLoading && <LoadingSpinner asOverlay />}
                 <div>
