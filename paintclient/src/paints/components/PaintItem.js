@@ -40,7 +40,7 @@ const PaintItem = (props) => {
                         {props.storecode}
                     </div>
                 </div>
-                <Button> edit </Button>
+                <Button to={`/paints/${props.id}`}> edit </Button>
                 <Button> delete </Button>
             </Card>
         </li>
