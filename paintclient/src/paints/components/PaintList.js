@@ -1,6 +1,7 @@
 import React from "react"
 
 import Button from "../../shared/components/FormElements/Button"
+import PaintItem from "./PaintItem"
 import "./PaintList.css"
 
 const PaintList = (props) => {
@@ -16,7 +17,20 @@ const PaintList = (props) => {
 
     return (
         <ul className="paint-list">
-
+            {
+                props.item.map((paint) => (
+                    <PaintItem
+                        key={paint.id}
+                        id={paint.id}
+                        paintname={paint.paintname}
+                        paintcode={paint.paintcode}
+                        paintbrand={paint.paintbrand}
+                        base={paint.base}
+                        storecode={paint.storecode}
+                        onDelete={props.onDelete}
+                    />
+                ))
+            }
         </ul>
     )
 

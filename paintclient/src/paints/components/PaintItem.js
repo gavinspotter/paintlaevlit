@@ -36,6 +36,9 @@ const PaintItem = (props) => {
                     {/* <div>
                         {props.room}
                     </div> */}
+                    <div>
+                        {props.storecode}
+                    </div>
                 </div>
                 <Button> edit </Button>
                 <Button> delete </Button>
