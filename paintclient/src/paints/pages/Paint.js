@@ -26,6 +26,11 @@ const Paint = () => {
         fetchPaints()
     }, [sendRequest, userId])
 
+    return (
+        <React.Fragment>
+
+        </React.Fragment>
+    )
 }
 
 export default Paint
