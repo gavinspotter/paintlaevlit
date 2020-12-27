@@ -14,9 +14,17 @@ const Paint = () => {
 
     useEffect(() => {
         const fetchPaints = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/paints/user/${userId}`
+                )
+                setLoadedPaint(responseData.paint)
+            } catch (err) {
 
+            }
         }
-    }, [])
+        fetchPaints()
+    }, [sendRequest, userId])
 
 }
 
