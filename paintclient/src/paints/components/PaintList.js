@@ -18,7 +18,7 @@ const PaintList = (props) => {
     return (
         <ul className="paint-list">
             {
-                props.item.map((paint) => (
+                props.items.map((paint) => (
                     <PaintItem
                         key={paint.id}
                         id={paint.id}

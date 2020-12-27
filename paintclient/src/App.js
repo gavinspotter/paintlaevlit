@@ -4,6 +4,7 @@ import {
   Switch, Route
 } from "react-router-dom"
 import NewPaint from "./paints/pages/NewPaint"
+import Paint from "./paints/pages/Paint"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
@@ -31,6 +32,9 @@ const App = () => {
       <Switch>
         <Route path="/paints/new">
           <NewPaint />
+        </Route>
+        <Route path="/:userId/paints">
+          <Paint />
         </Route>
       </Switch>
     )
