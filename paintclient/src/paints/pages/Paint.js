@@ -8,6 +8,7 @@ const Paint = () => {
 
     const [loadedPaint, setLoadedPaint] = useState()
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
 
 }
