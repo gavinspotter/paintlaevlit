@@ -48,7 +48,7 @@ const PaintItem = (props) => {
                         <Button onClick={cancelDeleteHandler}>
                             cancel
                         </Button>
-                        <Button onclick={confirmDeleteHandler}>
+                        <Button onClick={confirmDeleteHandler}>
                             delete
                         </Button>
                     </React.Fragment>
@@ -80,7 +80,7 @@ const PaintItem = (props) => {
                         </div>
                     </div>
                     <Button to={`/paints/${props.id}`}> edit </Button>
-                    <Button> delete </Button>
+                    <Button onClick={shoDeleteWarningHandler}> delete </Button>
                 </Card>
             </li>
         </React.Fragment>

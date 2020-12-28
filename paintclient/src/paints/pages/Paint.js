@@ -42,7 +42,7 @@ const Paint = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading && loadedPaint && <PaintList items={loadedPaint} />}
+            {!isLoading && loadedPaint && <PaintList items={loadedPaint} onDelete={paintDeleteHandler} />}
         </React.Fragment>
     )
 }

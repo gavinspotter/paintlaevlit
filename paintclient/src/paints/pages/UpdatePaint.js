@@ -1,5 +1,11 @@
 import React from "react"
 
-const UpdatePaint = () => {}
+import { AuthContext } from "../../shared/context/auth-context"
+
+const UpdatePaint = () => {
+
+
+
+}
 
 export default UpdatePaint
