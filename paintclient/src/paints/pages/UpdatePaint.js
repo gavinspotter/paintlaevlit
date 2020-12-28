@@ -75,7 +75,11 @@ const UpdatePaint = () => {
                             dv={loadedPaintname}
                         />
                         <Input
-
+                            element="input"
+                            name="paintcode"
+                            valRef={register}
+                            label="paint code"
+                            dv={loadedPaintcode}
                         />
                         <Input />
                         <Input />
