@@ -123,8 +123,14 @@ const updatePaint = async (req, res, next) => {
   } = req.body
 
   const paintId = req.params.bid
-  
 
+  let paint 
+
+  try {
+    
+  } catch (err) {
+    
+  }
   
 }
 
