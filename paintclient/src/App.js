@@ -5,6 +5,7 @@ import {
 } from "react-router-dom"
 import NewPaint from "./paints/pages/NewPaint"
 import Paint from "./paints/pages/Paint"
+import UpdatePaint from "./paints/pages/UpdatePaint"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
@@ -30,14 +31,14 @@ const App = () => {
   if (isLoggedIn) {
     routes = (
       <Switch>
-        <Route path="/paints/new">
-          <NewPaint />
-        </Route>
         <Route path="/:userId/paints">
           <Paint />
         </Route>
+        <Route path="/paints/new">
+          <NewPaint />
+        </Route>
         <Route path="/paints/:paintId">
-
+          <UpdatePaint />
         </Route>
       </Switch>
     )
