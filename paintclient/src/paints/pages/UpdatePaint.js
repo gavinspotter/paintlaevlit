@@ -58,6 +58,12 @@ const UpdatePaint = () => {
             </div>
         )
     }
+
+    return (
+        <React.Fragment>
+
+        </React.Fragment>
+    )
 }
 
 export default UpdatePaint
