@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import Button from "../../shared/components/FormElements/Button"
 
 import Card from "../../shared/components/UIElements/Card"
@@ -9,6 +9,8 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
 
 const PaintItem = (props) => {
+
+    const auth = useContext(AuthContext)
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
