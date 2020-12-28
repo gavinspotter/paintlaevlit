@@ -45,6 +45,18 @@ const UpdatePaint = () => {
 
     const onSubmit = async (data) => {
         try {
+            await sendRequest(
+                `http://localhost:5000/api/paints/${paintId}`,
+                "PATCH",
+                JSON.stringify({
+                    paintname: data.paintname,
+                    paintcode: data.paintcode,
+                    paintbrand: data.paintbrand,
+                    base: data.base,
+                    storecode: data.storecode
+                }),
+                { "Content-Type": "application/json" }
+            )
 
         } catch (err) {
 
