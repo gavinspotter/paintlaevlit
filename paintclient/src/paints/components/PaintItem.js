@@ -11,41 +11,59 @@ const PaintItem = (props) => {
 
     const [showConfirmModal, setShowConfirmModal] = useState(false)
 
+    const shoDeleteWarningHandler = () => {
+        setShowConfirmModal(true)
+    }
+
+    const cancelDeleteHandler = () => {
+        setShowConfirmModal(false)
+    }
 
     const confirmDeleteHandler = async () => {
         setShowConfirmModal(false);
 
+        try {
+            await sendRequest(
+                `http://localhost:5000/api/paints/${props.id}`,
+                "DELETE"
 
+            )
+            props.onDelete(props.id)
+        } catch (err) {
+
+        }
     }
 
     return (
-        <li className="paint-list-item">
-            <Card>
-                {isLoading && <LoadingSpinner asOverlay />}
-                <div>
+        <React.Fragment>
+            <li className="paint-list-item">
+                <Card>
+                    {isLoading && <LoadingSpinner asOverlay />}
                     <div>
-                        {props.paintname}
-                    </div>
-                    <div>
-                        {props.paintcode}
-                    </div>
-                    <div>
-                        {props.paintbrand}
-                    </div>
-                    <div>
-                        {props.base}
-                    </div>
-                    {/* <div>
+                        <div>
+                            {props.paintname}
+                        </div>
+                        <div>
+                            {props.paintcode}
+                        </div>
+                        <div>
+                            {props.paintbrand}
+                        </div>
+                        <div>
+                            {props.base}
+                        </div>
+                        {/* <div>
                         {props.room}
                     </div> */}
-                    <div>
-                        {props.storecode}
+                        <div>
+                            {props.storecode}
+                        </div>
                     </div>
-                </div>
-                <Button to={`/paints/${props.id}`}> edit </Button>
-                <Button> delete </Button>
-            </Card>
-        </li>
+                    <Button to={`/paints/${props.id}`}> edit </Button>
+                    <Button> delete </Button>
+                </Card>
+            </li>
+        </React.Fragment>
     )
 }
 
