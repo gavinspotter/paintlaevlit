@@ -44,7 +44,11 @@ const UpdatePaint = () => {
     }, [sendRequest, paintId])
 
     const onSubmit = async (data) => {
+        try {
 
+        } catch (err) {
+
+        }
     }
 
     if (isLoading) {
