@@ -43,6 +43,10 @@ const UpdatePaint = () => {
         fetchPaint()
     }, [sendRequest, paintId])
 
+    const onSubmit = async (data) => {
+
+    }
+
     if (isLoading) {
         return (
             <div>
