@@ -152,6 +152,8 @@ const updatePaint = async (req, res, next) => {
     )
     return next(error)
   }
+
+  res.status(200).json({ paint: paint.toObject({getters:true})})
   
 }
 
