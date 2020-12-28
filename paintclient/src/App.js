@@ -36,6 +36,9 @@ const App = () => {
         <Route path="/:userId/paints">
           <Paint />
         </Route>
+        <Route path="/paints/:paintId">
+
+        </Route>
       </Switch>
     )
   } else {
