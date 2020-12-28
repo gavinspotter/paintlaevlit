@@ -45,6 +45,9 @@ const PaintItem = (props) => {
                 header="are you sure?"
                 footer={
                     <React.Fragment>
+                        <Button onClick={cancelDeleteHandler}>
+                            cancel
+                        </Button>
 
                     </React.Fragment>
                 }
