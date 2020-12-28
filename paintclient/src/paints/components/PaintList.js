@@ -27,7 +27,6 @@ const PaintList = (props) => {
                         paintbrand={paint.paintbrand}
                         base={paint.base}
                         storecode={paint.storecode}
-                        creatorId={paint.creator}
                         onDelete={props.onDelete}
                     />
                 ))

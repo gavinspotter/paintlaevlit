@@ -114,6 +114,13 @@ const createPaint = async (req, res, next) => {
 
 const updatePaint = async (req, res, next) => {
 
+  const {
+    paintname,
+    paintcode,
+    paintbrand,
+    base,
+    storecode
+  } = req.body
   
   
 }

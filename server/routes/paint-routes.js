@@ -10,7 +10,7 @@ router.get("/:pid", paintController.getPaintById)
 
 router.post("/", paintController.createPaint);
 
-router.patch("/:pid")
+router.patch("/:pid", paintController.updatePaint)
 
 router.delete("/:pid", paintController.deletePaint)
 
