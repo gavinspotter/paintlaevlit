@@ -142,6 +142,12 @@ const updatePaint = async (req, res, next) => {
   paint.paintbrand = paintbrand
   paint.base = base
   paint.storecode = storecode
+
+  try {
+    
+  } catch (err) {
+    
+  }
   
 }
 
