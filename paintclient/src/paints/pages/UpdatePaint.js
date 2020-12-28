@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
@@ -12,8 +12,8 @@ const UpdatePaint = () => {
 
     const [loadedPaintname, setLoadedPaintname] = useState()
     const [loadedPaintcode, setLoadedPaintcode] = useState()
-    const [loadedPaintbrand, setLoadedPaintBrand] = useState()
-    const [loadedBase, setLoadedBade] = useState()
+    const [loadedPaintbrand, setLoadedPaintbrand] = useState()
+    const [loadedBase, setLoadedBase] = useState()
     const [loadedStorecode, setLoadedStorecode] = useState()
 
     const { register, handleSubmit } = useForm()
@@ -21,6 +21,23 @@ const UpdatePaint = () => {
 
     const history = useHistory()
 
+    useEffect(() => {
+        const fetchPaint = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/paints/${paintId}`
+                )
+                setLoadedPaintname(responseData.paint.paintname)
+                setLoadedPaintcode(responseData.paint.paintcode)
+                setLoadedStorecode(responseData.paint.paintbrand)
+                setLoadedBase(responseData.paint.base)
+                setLoadedPaintbrand(responseData.paint.storecode)
+            } catch (err) {
+
+            }
+        }
+        fetchPaint()
+    }, [sendRequest, paintId])
 
 }
 
