@@ -121,7 +121,10 @@ const updatePaint = async (req, res, next) => {
     base,
     storecode
   } = req.body
+
+  const paintId = req.params.bid
   
+
   
 }
 
