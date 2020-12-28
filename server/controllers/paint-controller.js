@@ -136,6 +136,12 @@ const updatePaint = async (req, res, next) => {
     return next(error)
     
   }
+
+  paint.paintname = paintname
+  paint.paintcode = paintcode
+  paint.paintbrand = paintbrand
+  paint.base = base
+  paint.storecode = storecode
   
 }
 
