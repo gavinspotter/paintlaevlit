@@ -6,6 +6,7 @@ import { useHistory, useParams } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Card from "../../shared/components/UIElements/Card"
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 
 const UpdatePaint = () => {
 
@@ -61,6 +62,8 @@ const UpdatePaint = () => {
 
     return (
         <React.Fragment>
+            <ErrorModal error={error} onClear={clearError} />
+
 
         </React.Fragment>
     )
