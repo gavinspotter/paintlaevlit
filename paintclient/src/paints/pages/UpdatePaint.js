@@ -17,8 +17,7 @@ const UpdatePaint = () => {
     const [loadedStorecode, setLoadedStorecode] = useState()
 
     const { register, handleSubmit } = useForm()
-
-
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
 
 
