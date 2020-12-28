@@ -88,7 +88,13 @@ const UpdatePaint = () => {
                             label="brand"
                             dv={loadedPaintbrand}
                         />
-                        <Input />
+                        <Input
+                            element="input"
+                            name="base"
+                            valRef={register}
+                            label="base"
+                            dv={loadedBase}
+                        />
                         <Input />
                     </form>
                 </Card>

@@ -78,7 +78,7 @@ const NewPaint = () => {
                     <Input
                         name="base"
                         valRef={register}
-                        label="paint base"
+                        label="base"
                         element="input"
                     />
 
