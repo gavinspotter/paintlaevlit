@@ -54,7 +54,7 @@ const PaintItem = (props) => {
                     </React.Fragment>
                 }
             >
-
+                this cant be undone are you sure?
             </Modal>
             <li className="paint-list-item">
                 <Card>
