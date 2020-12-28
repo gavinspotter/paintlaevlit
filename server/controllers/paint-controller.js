@@ -144,9 +144,13 @@ const updatePaint = async (req, res, next) => {
   paint.storecode = storecode
 
   try {
-    
+    await paint.save()
   } catch (err) {
-    
+    const error = new HttpError(
+      "couldnt save update",
+      500
+    )
+    return next(error)
   }
   
 }
