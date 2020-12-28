@@ -5,6 +5,7 @@ import { AuthContext } from "../../shared/context/auth-context"
 import { useHistory, useParams } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
+import Card from "../../shared/components/UIElements/Card"
 
 const UpdatePaint = () => {
 
@@ -30,9 +31,9 @@ const UpdatePaint = () => {
                 )
                 setLoadedPaintname(responseData.paint.paintname)
                 setLoadedPaintcode(responseData.paint.paintcode)
-                setLoadedStorecode(responseData.paint.paintbrand)
+                setLoadedPaintbrand(responseData.paint.paintbrand)
                 setLoadedBase(responseData.paint.base)
-                setLoadedPaintbrand(responseData.paint.storecode)
+                setLoadedStorecode(responseData.paint.storecode)
             } catch (err) {
 
             }
@@ -44,6 +45,16 @@ const UpdatePaint = () => {
         return (
             <div>
                 <LoadingSpinner />
+            </div>
+        )
+    }
+
+    if (!loadedBase && !loadedPaintbrand && !loadedPaintcode && !loadedPaintname && !loadedStorecode && !error) {
+        return (
+            <div>
+                <Card>
+                    <h2> couldnt find paint </h2>
+                </Card>
             </div>
         )
     }
