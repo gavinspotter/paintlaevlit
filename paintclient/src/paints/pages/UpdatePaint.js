@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
@@ -8,6 +8,12 @@ const UpdatePaint = () => {
 
     const auth = useContext(AuthContext)
     const paintId = useParams().paintId
+
+    const [loadedPaintname, setLoadedPaintname] = useState()
+    const [loadedPaintcode, setLoadedPaintcode] = useState()
+    const [loadedPaintbrand, setLoadedPaintBrand] = useState()
+    const [loadedBase, setLoadedBade] = useState()
+    const [loadedStorecode, setLoadedStorecode] = useState()
 
 }
 
