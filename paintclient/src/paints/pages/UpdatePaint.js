@@ -57,7 +57,7 @@ const UpdatePaint = () => {
                 }),
                 { "Content-Type": "application/json" }
             )
-
+            history.push("/" + auth.userId + "/paints")
         } catch (err) {
 
         }
