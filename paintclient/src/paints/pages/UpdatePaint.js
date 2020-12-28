@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
-import { useParams } from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom"
 import { useForm } from "react-hook-form"
 
 const UpdatePaint = () => {
@@ -19,6 +19,7 @@ const UpdatePaint = () => {
     const { register, handleSubmit } = useForm()
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+    const history = useHistory()
 
 
 }
