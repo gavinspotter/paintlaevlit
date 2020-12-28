@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useParams } from "react-router-dom"
+import { useForm } from "react-hook-form"
 
 const UpdatePaint = () => {
 
@@ -14,6 +15,12 @@ const UpdatePaint = () => {
     const [loadedPaintbrand, setLoadedPaintBrand] = useState()
     const [loadedBase, setLoadedBade] = useState()
     const [loadedStorecode, setLoadedStorecode] = useState()
+
+    const { register, handleSubmit } = useForm()
+
+
+
+
 
 }
 
