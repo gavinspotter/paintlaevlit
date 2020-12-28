@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import Input from "../../shared/components/FormElements/Input"
 
 const UpdatePaint = () => {
 
@@ -50,7 +51,7 @@ const UpdatePaint = () => {
         )
     }
 
-    if (!loadedBase && !loadedPaintbrand && !loadedPaintcode && !loadedPaintname && !loadedStorecode && !error) {
+    if (!loadedPaintname && !error) {
         return (
             <div>
                 <Card>
@@ -63,7 +64,25 @@ const UpdatePaint = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
+            {!isLoading && loadedPaintname && (
+                <Card>
+                    <form>
+                        <Input
+                            element="input"
+                            name="paintname"
+                            valRef={register}
+                            label="name"
+                            dv={loadedPaintname}
+                        />
+                        <Input
 
+                        />
+                        <Input />
+                        <Input />
+                        <Input />
+                    </form>
+                </Card>
+            )}
 
         </React.Fragment>
     )
