@@ -48,7 +48,9 @@ const PaintItem = (props) => {
                         <Button onClick={cancelDeleteHandler}>
                             cancel
                         </Button>
-
+                        <Button onclick={confirmDeleteHandler}>
+                            delete
+                        </Button>
                     </React.Fragment>
                 }
             >
