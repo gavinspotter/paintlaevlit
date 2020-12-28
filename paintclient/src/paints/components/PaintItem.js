@@ -6,6 +6,7 @@ import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Modal from "../../shared/components/UIElements/Modal"
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import { AuthContext } from "../../shared/context/auth-context"
 
 const PaintItem = (props) => {
 

@@ -8,6 +8,7 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import Input from "../../shared/components/FormElements/Input"
+import Button from "../../shared/components/FormElements/Button"
 
 const UpdatePaint = () => {
 
@@ -86,7 +87,7 @@ const UpdatePaint = () => {
             <ErrorModal error={error} onClear={clearError} />
             {!isLoading && loadedPaintname && (
                 <Card>
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
                             element="input"
                             name="paintname"
@@ -122,6 +123,7 @@ const UpdatePaint = () => {
                             label="store code"
                             dv={loadedStorecode}
                         />
+                        <Button> edit </Button>
                     </form>
                 </Card>
             )}
