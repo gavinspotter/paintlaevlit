@@ -4,6 +4,7 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHistory, useParams } from "react-router-dom"
 import { useForm } from "react-hook-form"
+import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 const UpdatePaint = () => {
 
@@ -39,6 +40,13 @@ const UpdatePaint = () => {
         fetchPaint()
     }, [sendRequest, paintId])
 
+    if (isLoading) {
+        return (
+            <div>
+                <LoadingSpinner />
+            </div>
+        )
+    }
 }
 
 export default UpdatePaint
