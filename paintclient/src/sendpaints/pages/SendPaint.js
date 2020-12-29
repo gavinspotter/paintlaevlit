@@ -21,7 +21,12 @@ const SendPaint = () => {
             <Card>
                 <form>
                     {isLoading && <LoadingSpinner asOverlay />}
-                    <Input />
+                    <Input
+                        name="paintname"
+                        valRef={register}
+                        label="name"
+                        element="input"
+                    />
                     <Input />
                     <Input />
                     <Input />
