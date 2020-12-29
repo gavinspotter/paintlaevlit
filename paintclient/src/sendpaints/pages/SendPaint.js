@@ -27,7 +27,12 @@ const SendPaint = () => {
                         label="name"
                         element="input"
                     />
-                    <Input />
+                    <Input
+                        name="paintcode"
+                        valRef={register}
+                        label="paint code"
+                        element="input"
+                    />
                     <Input />
                     <Input />
                     <Input />
