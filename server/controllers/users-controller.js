@@ -1,8 +1,9 @@
 const HttpError = require("../models/HttpError");
 const User = require("../models/user");
 
-const getUsersByUsername = async (req, res, next) => {
-  const userName = req.params.usernamee;
+const getUserByEmail = async (req, res, next) => {
+
+  const {email} = req.body
 
   let user;
 
@@ -79,4 +80,4 @@ const login = async (req, res, next) => {
 
 exports.signup = signup;
 exports.login = login;
-exports.getUsersByUsername = getUsersByUsername;
+exports.getUserByEmail = getUserByEmail;
