@@ -16,6 +16,10 @@ const SendPaint = () => {
 
     const [email, setEmail] = useState()
 
+    const onSubmit = () => {
+
+    }
+
 
     return (
         <React.Fragment>
