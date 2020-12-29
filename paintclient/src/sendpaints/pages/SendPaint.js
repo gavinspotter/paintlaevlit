@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { useForm } from "react-hook-form"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
@@ -11,7 +11,7 @@ import { AuthContext } from "../../shared/context/auth-context"
 
 const SendPaint = () => {
 
-
+    const auth = useContext(AuthContext)
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
