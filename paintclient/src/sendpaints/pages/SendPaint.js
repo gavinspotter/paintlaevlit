@@ -58,6 +58,8 @@ const SendPaint = () => {
 
             )
 
+            history.push("/" + auth.userId + "/sent")
+
 
         } catch (err) {
 
