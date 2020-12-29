@@ -8,6 +8,7 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHistory } from "react-router-dom"
+import Button from "../../shared/components/FormElements/Button"
 
 
 const SendPaint = () => {
@@ -20,7 +21,6 @@ const SendPaint = () => {
 
     const { register, handleSubmit } = useForm()
 
-    const [email, setEmail] = useState()
 
     const onSubmit = async (data) => {
         try {
@@ -34,36 +34,37 @@ const SendPaint = () => {
                     "Content-Type": "application/json"
                 }
             )
-            setEmail(responseData.user.id)
+
+            try {
+                await sendRequest(
+                    "http://localhost:5000/api/sharingpaints",
+                    "POST",
+                    JSON.stringify({
+                        paintname: data.paintname,
+                        paintcode: data.paintcode,
+                        paintbrand: data.paintbrand,
+                        base: data.base,
+                        storecode: data.storecode,
+                        sender: auth.userId,
+                        receiver: responseData.user[0].id
+                    }),
+                    {
+                        "Content-Type": "application/json"
+                    }
+
+                )
+
+                history.push("/" + auth.userId + "/sent")
+
+
+            } catch (err) {
+
+            }
         } catch (err) {
 
         }
 
-        try {
-            await sendRequest(
-                "http://localhost:5000/api/sharingpaints",
-                "POST",
-                JSON.stringify({
-                    paintname: data.paintname,
-                    paintcode: data.paintcode,
-                    paintbrand: data.paintbrand,
-                    base: data.base,
-                    storecode: data.storecode,
-                    sender: auth.userId,
-                    receiver: email
-                }),
-                {
-                    "Content-Type": "application/json"
-                }
 
-            )
-
-            history.push("/" + auth.userId + "/sent")
-
-
-        } catch (err) {
-
-        }
 
     }
 
@@ -111,6 +112,7 @@ const SendPaint = () => {
                         label="email"
                         element="input"
                     />
+                    <Button> send </Button>
 
                 </form>
             </Card>
