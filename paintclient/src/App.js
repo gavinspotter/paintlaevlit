@@ -6,6 +6,7 @@ import {
 import NewPaint from "./paints/pages/NewPaint"
 import Paint from "./paints/pages/Paint"
 import UpdatePaint from "./paints/pages/UpdatePaint"
+import SendPaint from "./sendpaints/pages/SendPaint"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
@@ -39,6 +40,9 @@ const App = () => {
         </Route>
         <Route path="/paints/:paintId">
           <UpdatePaint />
+        </Route>
+        <Route path="/send/new">
+          <SendPaint />
         </Route>
       </Switch>
     )

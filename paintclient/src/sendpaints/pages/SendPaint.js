@@ -7,11 +7,14 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
+import { useHistory } from "react-router-dom"
 
 
 const SendPaint = () => {
 
     const auth = useContext(AuthContext)
+
+    const history = useHistory()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
@@ -54,6 +57,8 @@ const SendPaint = () => {
                 }
 
             )
+
+
         } catch (err) {
 
         }
