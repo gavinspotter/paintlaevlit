@@ -6,9 +6,12 @@ import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import { AuthContext } from "../../shared/context/auth-context"
 
 
 const SendPaint = () => {
+
+
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
