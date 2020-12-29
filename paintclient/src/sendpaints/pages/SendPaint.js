@@ -17,7 +17,11 @@ const SendPaint = () => {
     const [email, setEmail] = useState()
 
     const onSubmit = () => {
+        try {
 
+        } catch (err) {
+
+        }
     }
 
 
