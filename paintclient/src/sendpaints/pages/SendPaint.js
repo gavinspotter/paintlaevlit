@@ -37,7 +37,23 @@ const SendPaint = () => {
         }
 
         try {
+            await sendRequest(
+                "http://localhost:5000/api/sharingpaints",
+                "POST",
+                JSON.stringify({
+                    paintname: data.paintname,
+                    paintcode: data.paintcode,
+                    paintbrand: data.paintbrand,
+                    base: data.base,
+                    storecode: data.storecode,
+                    sender: auth.userId,
+                    receiver: email
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
 
+            )
         } catch (err) {
 
         }
