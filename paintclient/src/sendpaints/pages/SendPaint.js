@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
@@ -19,6 +20,7 @@ const SendPaint = () => {
             <ErrorModal error={error} onClear={clearError} />
             <Card>
                 <form>
+                    {isLoading && <LoadingSpinner asOverlay />}
                     <Input />
                     <Input />
                     <Input />
