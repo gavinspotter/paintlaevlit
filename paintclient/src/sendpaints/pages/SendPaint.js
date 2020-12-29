@@ -15,13 +15,15 @@ const SendPaint = () => {
     const { register, handleSubmit } = useForm()
 
 
+
+
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <Card>
                 <form>
                     {isLoading && <LoadingSpinner asOverlay />}
-                    <Input />
+
                     <Input
                         name="paintname"
                         valRef={register}
@@ -50,6 +52,12 @@ const SendPaint = () => {
                         name="storecode"
                         valRef={register}
                         label="store code"
+                        element="input"
+                    />
+                    <Input
+                        name="email"
+                        valRef={register}
+                        label="email"
                         element="input"
                     />
 
