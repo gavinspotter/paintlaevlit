@@ -65,7 +65,7 @@ const SendPaint = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <Card>
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     {isLoading && <LoadingSpinner asOverlay />}
 
                     <Input
