@@ -19,6 +19,7 @@ const sharePaint = async (req, res, next) => {
         paintbrand,
         storecode,
         sender,
+        base,
         receiver
     } = req.body
 
@@ -29,6 +30,7 @@ const sharePaint = async (req, res, next) => {
         paintcode,
         paintbrand,
         storecode,
+        base,
         sender
     })
 
@@ -39,6 +41,7 @@ const sharePaint = async (req, res, next) => {
         paintcode,
         paintbrand,
         storecode,
+        base,
         receiver
     })
 
