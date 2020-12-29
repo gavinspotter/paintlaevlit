@@ -33,6 +33,11 @@ const SendPaint = () => {
 
         }
 
+        try {
+
+        } catch (err) {
+
+        }
 
     }
 
