@@ -8,7 +8,7 @@ const getUserByEmail = async (req, res, next) => {
   let user;
 
   try {
-    user = await User.find({ email: email }, "-password");
+    user = await User.find({ email: email }, "id");
   } catch (err) {
     const error = new HttpError(
       "fetching user by email failed, please try again later",
