@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
@@ -14,7 +14,7 @@ const SendPaint = () => {
 
     const { register, handleSubmit } = useForm()
 
-
+    const [email, setEmail] = useState()
 
 
     return (
