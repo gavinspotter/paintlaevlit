@@ -16,12 +16,24 @@ const SendPaint = () => {
 
     const [email, setEmail] = useState()
 
-    const onSubmit = () => {
+    const onSubmit = async (data) => {
         try {
-
+            const responseData = await sendRequest(
+                "http://localhost:5000/api/users/email",
+                "POST",
+                JSON.stringify({
+                    email: data.email
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
+            )
+            setEmail(responseData.user.id)
         } catch (err) {
 
         }
+
+
     }
 
 
