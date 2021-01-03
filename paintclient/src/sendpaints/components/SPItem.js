@@ -10,6 +10,11 @@ const SPItem = () => {
 
     const [showConfirmModal, setShowConfirmModal] = useState(false)
 
+    const showDeleteWarningHandler = () => {
+        setShowConfirmModal(true)
+    }
+
+
 }
 
 export default SPItem
