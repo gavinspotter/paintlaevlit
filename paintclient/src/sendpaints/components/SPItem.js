@@ -14,6 +14,9 @@ const SPItem = () => {
         setShowConfirmModal(true)
     }
 
+    const cancelDeleteHandler = () => {
+        setShowConfirmModal(false)
+    }
 
 }
 
