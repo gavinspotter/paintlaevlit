@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 
 
 
@@ -35,7 +36,7 @@ const SPItem = (props) => {
 
     return (
         <React.Fragment>
-
+            <ErrorModal error={error} onClear={clearError} />
         </React.Fragment>
     )
 
