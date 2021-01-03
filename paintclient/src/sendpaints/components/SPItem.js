@@ -4,7 +4,7 @@ import React, { useState } from "react"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
-const SPItem = () => {
+const SPItem = (props) => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
@@ -20,7 +20,20 @@ const SPItem = () => {
 
     const confirmDeleteHandler = async () => {
         setShowConfirmModal(false)
+
+        try {
+            await sendRequest(
+                `http://localhost:5000/api/sentpaints/${props.id}`,
+                "DELETE"
+            )
+            props.onDelete(props.id)
+        } catch (err) {
+
+        }
+
     }
+
+
 
 }
 
