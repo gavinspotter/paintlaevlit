@@ -18,6 +18,10 @@ const SPItem = () => {
         setShowConfirmModal(false)
     }
 
+    const confirmDeleteHandler = async () => {
+        setShowConfirmModal(false)
+    }
+
 }
 
 export default SPItem
