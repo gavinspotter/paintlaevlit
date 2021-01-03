@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { useForm } from "react-hook-form"
 import Input from "../../shared/components/FormElements/Input"
 import Card from "../../shared/components/UIElements/Card"
@@ -23,6 +23,9 @@ const SendPaint = () => {
 
 
     const onSubmit = async (data) => {
+
+
+        let rd
         try {
             const responseData = await sendRequest(
                 "http://localhost:5000/api/users/email",
@@ -35,35 +38,39 @@ const SendPaint = () => {
                 }
             )
 
-            try {
-                await sendRequest(
-                    "http://localhost:5000/api/sharingpaints",
-                    "POST",
-                    JSON.stringify({
-                        paintname: data.paintname,
-                        paintcode: data.paintcode,
-                        paintbrand: data.paintbrand,
-                        base: data.base,
-                        storecode: data.storecode,
-                        sender: auth.userId,
-                        receiver: responseData.user[0].id
-                    }),
-                    {
-                        "Content-Type": "application/json"
-                    }
+            rd = responseData.user[0].id
 
-                )
-
-                history.push("/" + auth.userId + "/sent")
-
-
-            } catch (err) {
-
-            }
         } catch (err) {
 
         }
 
+
+
+        try {
+            await sendRequest(
+                "http://localhost:5000/api/sharingpaints",
+                "POST",
+                JSON.stringify({
+                    paintname: data.paintname,
+                    paintcode: data.paintcode,
+                    paintbrand: data.paintbrand,
+                    base: data.base,
+                    storecode: data.storecode,
+                    sender: auth.userId,
+                    receiver: rd
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
+
+            )
+
+            history.push("/" + auth.userId + "/sent")
+
+
+        } catch (err) {
+
+        }
 
 
     }
