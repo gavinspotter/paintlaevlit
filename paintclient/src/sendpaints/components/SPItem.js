@@ -1,5 +1,7 @@
 import React, { useState } from "react"
+import Button from "../../shared/components/FormElements/Button"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import Modal from "../../shared/components/UIElements/Modal"
 
 
 
@@ -37,6 +39,23 @@ const SPItem = (props) => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
+            <Modal
+                show={showConfirmModal}
+                onCancel={cancelDeleteHandler}
+                header="are you sure?"
+                footer={
+                    <React.Fragment>
+                        <Button onClick={cancelDeleteHandler}>
+                            cancel
+                    </Button>
+                        <Button onClick={confirmDeleteHandler}>
+                            delete
+                    </Button>
+                    </React.Fragment>
+                }
+            >
+
+            </Modal>
         </React.Fragment>
     )
 
