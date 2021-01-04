@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Button from "../../shared/components/FormElements/Button"
+import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Modal from "../../shared/components/UIElements/Modal"
 
 
@@ -56,6 +58,9 @@ const SPItem = (props) => {
             >
                 this cant be undone are you sure?
             </Modal>
+            <Card>
+                {isLoading && <LoadingSpinner asOverlay />}
+            </Card>
         </React.Fragment>
     )
 
