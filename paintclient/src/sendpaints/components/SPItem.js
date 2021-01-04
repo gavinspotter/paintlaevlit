@@ -60,6 +60,26 @@ const SPItem = (props) => {
             </Modal>
             <Card>
                 {isLoading && <LoadingSpinner asOverlay />}
+                <div>
+                    <div>
+                        {props.paintname}
+                    </div>
+                    <div>
+                        {props.paintcode}
+                    </div>
+                    <div>
+                        {props.paintbrand}
+                    </div>
+                    <div>
+                        {props.base}
+                    </div>
+                    <div>
+                        {props.storecode}
+                    </div>
+                </div>
+                <Button onClick={showDeleteWarningHandler}>
+                    delete
+                </Button>
             </Card>
         </React.Fragment>
     )
