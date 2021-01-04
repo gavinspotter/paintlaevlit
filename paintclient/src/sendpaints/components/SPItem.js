@@ -58,29 +58,31 @@ const SPItem = (props) => {
             >
                 this cant be undone are you sure?
             </Modal>
-            <Card>
-                {isLoading && <LoadingSpinner asOverlay />}
-                <div>
+            <li>
+                <Card>
+                    {isLoading && <LoadingSpinner asOverlay />}
                     <div>
-                        {props.paintname}
+                        <div>
+                            {props.paintname}
+                        </div>
+                        <div>
+                            {props.paintcode}
+                        </div>
+                        <div>
+                            {props.paintbrand}
+                        </div>
+                        <div>
+                            {props.base}
+                        </div>
+                        <div>
+                            {props.storecode}
+                        </div>
                     </div>
-                    <div>
-                        {props.paintcode}
-                    </div>
-                    <div>
-                        {props.paintbrand}
-                    </div>
-                    <div>
-                        {props.base}
-                    </div>
-                    <div>
-                        {props.storecode}
-                    </div>
-                </div>
-                <Button onClick={showDeleteWarningHandler}>
-                    delete
+                    <Button onClick={showDeleteWarningHandler}>
+                        delete
                 </Button>
-            </Card>
+                </Card>
+            </li>
         </React.Fragment>
     )
 
