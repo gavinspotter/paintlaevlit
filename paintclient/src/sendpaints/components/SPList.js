@@ -1,5 +1,7 @@
 import React from "react"
+import Paint from "../../paints/pages/Paint"
 import Button from "../../shared/components/FormElements/Button"
+import SPItem from "./SPItem"
 
 const SPList = (props) => {
 
@@ -11,6 +13,25 @@ const SPList = (props) => {
             </div>
         )
     }
+
+    return (
+        <ul>
+            {
+                props.items.map((paint) => (
+                    <SPItem
+                        key={paint.id}
+                        id={paint.id}
+                        paintname={paint.paintname}
+                        paintcode={paint.paintcode}
+                        paintbrand={paint.paintbrand}
+                        base={paint.base}
+                        storecode={paint.storecode}
+                        onDelete={props.onDelete}
+                    />
+                ))
+            }
+        </ul>
+    )
 }
 
 export default SPList
