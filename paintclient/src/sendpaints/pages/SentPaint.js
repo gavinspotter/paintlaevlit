@@ -21,7 +21,10 @@ const SentPaint = () => {
 
             }
         }
-    })
+
+        fetchPaints()
+
+    }, [sendRequest, userId])
 }
 
 export default SentPaint
