@@ -29,6 +29,12 @@ const SentPaint = () => {
     const paintDeleteHandler = (deletedPaintId) => {
         setLoadedPaint((prevPaints) => prevPaints.filter((paint) => paint.id !== deletedPaintId))
     }
+
+    return (
+        <React.Fragment>
+
+        </React.Fragment>
+    )
 }
 
 export default SentPaint
