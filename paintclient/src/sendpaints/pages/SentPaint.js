@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
@@ -32,7 +33,7 @@ const SentPaint = () => {
 
     return (
         <React.Fragment>
-
+            <ErrorModal error={error} onClear={clearError} />
         </React.Fragment>
     )
 }
