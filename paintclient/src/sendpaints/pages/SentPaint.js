@@ -25,6 +25,10 @@ const SentPaint = () => {
         fetchPaints()
 
     }, [sendRequest, userId])
+
+    const paintDeleteHandler = (deletedPaintId) => {
+        setLoadedPaint((prevPaints) => prevPaints.filter((paint) => paint.id !== deletedPaintId))
+    }
 }
 
 export default SentPaint
