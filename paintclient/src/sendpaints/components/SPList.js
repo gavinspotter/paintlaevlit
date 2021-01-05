@@ -1,5 +1,5 @@
 import React from "react"
-import Paint from "../../paints/pages/Paint"
+
 import Button from "../../shared/components/FormElements/Button"
 import SPItem from "./SPItem"
 
