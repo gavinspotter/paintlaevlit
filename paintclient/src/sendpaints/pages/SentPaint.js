@@ -10,7 +10,13 @@ const SentPaint = () => {
 
     useEffect(() => {
         const fetchPaints = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:5000/api/sentpaints/user${}`
+                )
+            } catch (err) {
 
+            }
         }
     })
 }
