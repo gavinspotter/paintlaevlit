@@ -20,6 +20,7 @@ const SentPaint = () => {
                 const responseData = await sendRequest(
                     `http://localhost:5000/api/sentpaints/user${userId}`
                 )
+                setLoadedPaint(responseData.sentpaint)
             } catch (err) {
 
             }
