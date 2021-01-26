@@ -41,7 +41,7 @@ const SentPaint = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading && loadedPaint && <SPList />}
+            {!isLoading && loadedPaint && <SPList items={loadedPaint} />}
         </React.Fragment>
     )
 }
