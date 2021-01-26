@@ -64,26 +64,13 @@ const Auth = () => {
                         valRef={register}
                         label="password"
                         element="input"
+                        type="password"
                     />
                     did you mean to <Link to="/signup"> signup </Link> <br />
                     <Button type="submit">login</Button>
                 </form>
 
-                {/* <form onSubmit={paintSubmitHandler}>
-                    <Formhookinput
-                        id="email"
-                        element="input"
-                        label="email"
-                        onInput={inputHandler}
-                    />
-                    <Formhookinput
-                        id="password"
-                        element="input"
-                        label="password"
-                        onInput={inputHandler}
-                    />
-                    <Button type="submit"> submit </Button>
-                </form> */}
+
 
             </Card>
         </React.Fragment>
