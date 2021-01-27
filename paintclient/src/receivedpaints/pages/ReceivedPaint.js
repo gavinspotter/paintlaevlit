@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
@@ -10,6 +10,7 @@ const ReceivedPaint = () => {
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
+    const [loadedPaint, setLoadedPaint] = useState()
 
     const userId = useParams().userId
 
@@ -35,6 +36,7 @@ const ReceivedPaint = () => {
                     <LoadingSpinner />
                 </div>
             )}
+            {!isLoading &&}
         </React.Fragment>
     )
 
