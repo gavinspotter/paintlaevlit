@@ -1,5 +1,8 @@
 import React from "react"
 
-const ReceivedPaint = () => {}
+import { useHttpClient } from "../../shared/hooks/http-hook"
+
+
+const ReceivedPaint = () => { }
 
 export default ReceivedPaint
