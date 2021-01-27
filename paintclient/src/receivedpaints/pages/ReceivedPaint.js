@@ -4,6 +4,7 @@ import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import RPList from "../components/RPList"
 
 
 const ReceivedPaint = () => {
@@ -36,7 +37,7 @@ const ReceivedPaint = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading &&}
+            {!isLoading && loadedPaint && <RPList items={loadedPaint} />}
         </React.Fragment>
     )
 
