@@ -18,7 +18,7 @@ const SentPaint = () => {
         const fetchPaints = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/sentpaints/user${userId}`
+                    `http://localhost:5000/api/sentpaints/user/${userId}`
                 )
                 setLoadedPaint(responseData.sentpaint)
             } catch (err) {
