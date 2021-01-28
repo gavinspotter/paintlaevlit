@@ -1,6 +1,8 @@
 import React from "react"
 import RPItem from "./RPItem"
 
+import "./RPList.css"
+
 const RPList = (props) => {
     if (props.items.length === 0) {
         return (
