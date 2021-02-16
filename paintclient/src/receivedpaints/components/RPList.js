@@ -13,7 +13,7 @@ const RPList = (props) => {
     }
 
     return (
-        <ul>
+        <ul className="paint-list">
             {
                 props.items.map((paint) =>
                     <RPItem
