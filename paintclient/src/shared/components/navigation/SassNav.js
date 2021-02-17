@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from "../../context/auth-context"
 import "../../../css/style.css"
 
 const SassNav = () => {
 
-
+    const auth = useContext(AuthContext)
 
 
     return (
