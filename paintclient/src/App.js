@@ -10,6 +10,7 @@ import UpdatePaint from "./paints/pages/UpdatePaint"
 import ReceivedPaint from "./receivedpaints/pages/ReceivedPaint"
 import SendPaint from "./sendpaints/pages/SendPaint"
 import SentPaint from "./sendpaints/pages/SentPaint"
+import Background from "./shared/components/navigation/Background"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import SassNav from "./shared/components/navigation/SassNav"
 import { AuthContext } from "./shared/context/auth-context"
@@ -78,7 +79,9 @@ const App = () => {
       value={{ isLoggedIn: isLoggedIn, userId: userId, login: login, logout: logout }}
     >
       <Router>
-        <main> {routes}</main>
+        <Background>
+          {routes}
+        </Background>
       </Router>
 
     </AuthContext.Provider>
