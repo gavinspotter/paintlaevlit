@@ -16,4 +16,19 @@
         text-align: center;
         cursor: pointer;
     }
+
+
+    &__background{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient(red, blue);
+        z-index: 1000;
+        transition: transform .8s;
+
+        //transform: scale(80);
+    }
 }
