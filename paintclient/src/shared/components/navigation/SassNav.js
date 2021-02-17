@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../../../css/style.css"
 
 const SassNav = () => {
@@ -9,11 +10,11 @@ const SassNav = () => {
             <div className="navigation__background"></div>
             <nav className="navigation__nav">
                 <ul className="navigation__list">
-                    <li className="navigation__item"><a href="google.com" className="navigation__link">saved paint</a></li>
-                    <li className="navigation__item"><a href="google.com" className="navigation__link">create paint</a></li>
-                    <li className="navigation__item"><a href="google.com" className="navigation__link">send paint</a></li>
-                    <li className="navigation__item"><a href="google.com" className="navigation__link">sent paint</a></li>
-                    <li className="navigation__item"><a href="google.com" className="navigation__link">received paint</a></li>
+                    <li className="navigation__item"><Link to="" className="navigation__link">saved paint</Link></li>
+                    <li className="navigation__item"><Link to="" className="navigation__link">create paint</Link></li>
+                    <li className="navigation__item"><Link to="" className="navigation__link">send paint</Link></li>
+                    <li className="navigation__item"><Link to="" className="navigation__link">sent paint</Link></li>
+                    <li className="navigation__item"><Link to="" className="navigation__link">received paint</Link></li>
                 </ul>
             </nav>
 
