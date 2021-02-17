@@ -44,8 +44,9 @@ const Signup = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            <Card>
+            <Card className="auth__card">
                 {isLoading && <LoadingSpinner asOverylay />}
+                <h2>signup</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
                         name="name"
