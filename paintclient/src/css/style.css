@@ -36,6 +36,11 @@ html {
     opacity: 1;
     transform: translate(0); } }
 
+.auth__card {
+  position: absolute;
+  right: 45rem;
+  top: 20rem; }
+
 .navigation__checkbox {
   display: none; }
 
@@ -150,4 +155,5 @@ html {
 
 .section-features {
   background-image: url(../img/backgroundpainting.jpg);
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }

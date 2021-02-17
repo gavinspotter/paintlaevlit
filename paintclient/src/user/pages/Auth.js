@@ -50,7 +50,7 @@ const Auth = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            <Card className="authentication">
+            <Card className="authentication auth__card">
                 {isLoading && <LoadingSpinner asOverlay />}
                 <h2>please login</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
