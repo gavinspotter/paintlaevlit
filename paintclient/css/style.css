@@ -35,3 +35,6 @@ html {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+.navigation__checkbox {
+  display: none; }
