@@ -66,16 +66,16 @@ const SPItem = (props) => {
                             {props.paintname}
                         </div>
                         <div>
-                            {props.paintcode}
+                            {props.paintcode === "" ? null : props.paintcode}
                         </div>
                         <div>
-                            {props.paintbrand}
+                            {props.paintbrand === "" ? null : props.paintbrand}
                         </div>
                         <div>
-                            {props.base}
+                            {props.base === "" ? null : props.base}
                         </div>
                         <div>
-                            {props.storecode}
+                            {props.storecode === "" ? null : props.storecode}
                         </div>
                     </div>
                     <Button onClick={showDeleteWarningHandler}>
