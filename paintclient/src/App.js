@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react"
 import {
   BrowserRouter as Router,
+  Redirect,
   Switch, Route
 } from "react-router-dom"
 import NewPaint from "./paints/pages/NewPaint"
@@ -10,6 +11,7 @@ import ReceivedPaint from "./receivedpaints/pages/ReceivedPaint"
 import SendPaint from "./sendpaints/pages/SendPaint"
 import SentPaint from "./sendpaints/pages/SentPaint"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
+import SassNav from "./shared/components/navigation/SassNav"
 import { AuthContext } from "./shared/context/auth-context"
 import Auth from "./user/pages/Auth"
 import Signup from "./user/pages/Signup"
@@ -34,7 +36,9 @@ const App = () => {
 
   if (isLoggedIn) {
     routes = (
+
       <Switch>
+        <SassNav />
         <Route path="/:userId/paints">
           <Paint />
         </Route>
@@ -64,6 +68,7 @@ const App = () => {
         <Route path="/signup">
           <Signup />
         </Route>
+        <Redirect to="/auth" />
       </Switch>
     )
   }
@@ -73,7 +78,6 @@ const App = () => {
       value={{ isLoggedIn: isLoggedIn, userId: userId, login: login, logout: logout }}
     >
       <Router>
-        <MainNavigation />
         <main> {routes}</main>
       </Router>
 
