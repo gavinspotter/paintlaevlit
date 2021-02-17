@@ -3,7 +3,7 @@ import "../../../css/style.css"
 
 const Background = () => {
     return (
-        <div>
+        <div className="section-features">
 
         </div>
     )
