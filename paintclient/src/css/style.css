@@ -39,6 +39,9 @@ html {
 .u-margin-top-medium {
   margin-top: 5rem; }
 
+.u-margin-top-small {
+  margin-top: 1rem; }
+
 .auth__card {
   position: absolute;
   right: 45rem;

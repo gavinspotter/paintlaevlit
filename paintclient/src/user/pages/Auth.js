@@ -50,9 +50,10 @@ const Auth = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            <div>
-                <Card className="authentication auth__card">
-                    {isLoading && <LoadingSpinner asOverlay />}
+
+            <Card className="authentication auth__card">
+                {isLoading && <LoadingSpinner asOverlay />}
+                <div className="u-margin-top-small">
                     <h2>please login</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
@@ -68,14 +69,15 @@ const Auth = () => {
                             element="input"
                             type="password"
                         />
-                    did you mean to <Link to="/signup"> signup </Link> <br />
+
                         <Button type="submit">login</Button>
                     </form>
+                    did you mean to <Link to="/signup"> signup </Link> <br />
+                </div>
 
 
+            </Card>
 
-                </Card>
-            </div>
         </React.Fragment>
     )
 

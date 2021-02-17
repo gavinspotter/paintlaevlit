@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import Card from "../../shared/components/UIElements/Card"
@@ -70,6 +71,7 @@ const Signup = () => {
                         submit
                     </Button>
                 </form>
+                did you mean to <Link to="/login"> login </Link> <br />
             </Card>
         </React.Fragment>
     )
