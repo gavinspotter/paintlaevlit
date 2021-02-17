@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { AuthContext } from "../../context/auth-context"
 import "../../../css/style.css"
 
 const SassNav = () => {
+
+
+
+
     return (
         <div className="navigation">
             <input type="checkbox" className="navigation__checkbox" id="navi-toggle" />
