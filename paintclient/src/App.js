@@ -39,23 +39,30 @@ const App = () => {
     routes = (
 
       <Switch>
-        <SassNav />
+
         <Route path="/:userId/paints">
+          <SassNav />
           <Paint />
         </Route>
         <Route path="/paints/new">
+          <SassNav />
           <NewPaint />
         </Route>
+
         <Route path="/paints/:paintId">
+          <SassNav />
           <UpdatePaint />
         </Route>
         <Route path="/send/new">
+          <SassNav />
           <SendPaint />
         </Route>
         <Route path="/:userId/sent">
+          <SassNav />
           <SentPaint />
         </Route>
         <Route path="/:userId/received">
+          <SassNav />
           <ReceivedPaint />
         </Route>
       </Switch>
@@ -80,6 +87,7 @@ const App = () => {
     >
       <Router>
         <Background>
+
           {routes}
         </Background>
       </Router>
