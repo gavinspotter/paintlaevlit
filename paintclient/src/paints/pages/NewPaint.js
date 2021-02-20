@@ -9,6 +9,7 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import "./PaintForm.css"
+import "../../css/style.css"
 
 const NewPaint = () => {
     const auth = useContext(AuthContext)
