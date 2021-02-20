@@ -52,39 +52,39 @@ const NewPaint = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            <div className="newpaint">
-                <Card>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        {isLoading && <LoadingSpinner asOverlay />}
-                        <Input
-                            name="paintname"
-                            valRef={register}
-                            label="name"
-                            element="input"
-                        />
+            <div className="newpaint__card">
 
-                        <Input
-                            name="paintcode"
-                            valRef={register}
-                            label="paint code"
-                            element="input"
-                        />
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    {isLoading && <LoadingSpinner asOverlay />}
+                    <Input
+                        name="paintname"
+                        valRef={register}
+                        label="name"
+                        element="input"
+                    />
 
-                        <Input
-                            name="paintbrand"
-                            valRef={register}
-                            label="brand"
-                            element="input"
-                        />
+                    <Input
+                        name="paintcode"
+                        valRef={register}
+                        label="paint code"
+                        element="input"
+                    />
 
-                        <Input
-                            name="base"
-                            valRef={register}
-                            label="base"
-                            element="input"
-                        />
+                    <Input
+                        name="paintbrand"
+                        valRef={register}
+                        label="brand"
+                        element="input"
+                    />
 
-                        {/* <Input
+                    <Input
+                        name="base"
+                        valRef={register}
+                        label="base"
+                        element="input"
+                    />
+
+                    {/* <Input
                         name="room"
                         valRef={register}
                         label="room"
@@ -92,7 +92,7 @@ const NewPaint = () => {
 
                     /> */}
 
-                        {/* <Input
+                    {/* <Input
                         name="width"
                         valRef={register}
                         label="wall width"
@@ -117,18 +117,18 @@ const NewPaint = () => {
 
 
 
-                        <Input
-                            name="storecode"
-                            valRef={register}
-                            label="store code"
-                            element="input"
-                        />
+                    <Input
+                        name="storecode"
+                        valRef={register}
+                        label="store code"
+                        element="input"
+                    />
 
 
 
-                        <Button> submit </Button>
-                    </form>
-                </Card>
+                    <Button> submit </Button>
+                </form>
+
             </div>
         </React.Fragment>
     )
