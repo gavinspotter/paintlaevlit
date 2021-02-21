@@ -45,35 +45,37 @@ const Signup = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <div className="auth__card">
-                {isLoading && <LoadingSpinner asOverylay />}
+                <div className="auth__card-text">
+                    {isLoading && <LoadingSpinner asOverylay />}
 
-                <h2>signup</h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <Input
-                        name="name"
-                        valRef={register}
-                        label="name"
-                        element="input"
-                    />
-                    <Input
-                        name="email"
-                        valRef={register}
-                        label="email"
-                        element="input"
-                    />
+                    <h2>signup</h2>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Input
+                            name="name"
+                            valRef={register}
+                            label="name"
+                            element="input"
+                        />
+                        <Input
+                            name="email"
+                            valRef={register}
+                            label="email"
+                            element="input"
+                        />
 
-                    <Input
-                        name="password"
-                        valRef={register}
-                        label="password"
-                        element="input"
-                        type="password"
-                    />
-                    <Button type="submit">
-                        submit
+                        <Input
+                            name="password"
+                            valRef={register}
+                            label="password"
+                            element="input"
+                            type="password"
+                        />
+                        <Button type="submit">
+                            submit
                     </Button>
-                </form>
+                    </form>
                 did you mean to <Link to="/login"> login </Link> <br />
+                </div>
 
             </div>
         </React.Fragment>
