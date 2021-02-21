@@ -51,32 +51,33 @@ const Auth = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
 
-            <Card className="authentication auth__card">
-                {isLoading && <LoadingSpinner asOverlay />}
-                <div className="u-margin-top-small">
-                    <h2>please login</h2>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <Input
-                            name="login"
-                            valRef={register}
-                            label="email"
-                            element="input"
-                        />
-                        <Input
-                            name="password"
-                            valRef={register}
-                            label="password"
-                            element="input"
-                            type="password"
-                        />
+            <div className="auth__card">
+                <div className="auth__card-text">
+                    {isLoading && <LoadingSpinner asOverlay />}
+                    <div className="u-margin-top-small">
+                        <h2>please login</h2>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <Input
+                                name="login"
+                                valRef={register}
+                                label="email"
+                                element="input"
+                            />
+                            <Input
+                                name="password"
+                                valRef={register}
+                                label="password"
+                                element="input"
+                                type="password"
+                            />
 
-                        <Button type="submit">login</Button>
-                    </form>
+                            <Button type="submit">login</Button>
+                        </form>
                     did you mean to <Link to="/signup"> signup </Link> <br />
+                    </div>
                 </div>
 
-
-            </Card>
+            </div>
 
         </React.Fragment>
     )
