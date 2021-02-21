@@ -9,6 +9,7 @@ import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import Input from "../../shared/components/FormElements/Input"
 import Button from "../../shared/components/FormElements/Button"
+import "../../css/style.css"
 
 const UpdatePaint = () => {
 
