@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form"
 import { useHistory } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
 import Input from "../../shared/components/FormElements/Input"
-import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import { AuthContext } from "../../shared/context/auth-context"
@@ -43,7 +42,7 @@ const NewPaint = () => {
                     "Content-Type": "application/json"
                 }
             )
-            history.push("/newpaint")
+            history.push("/paint/new")
         } catch (err) {
             console.log(err)
         }

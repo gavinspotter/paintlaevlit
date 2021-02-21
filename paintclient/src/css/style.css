@@ -47,6 +47,18 @@ html {
   right: 45rem;
   top: 20rem; }
 
+.newpaint__card {
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 5%;
+  top: 17rem;
+  right: 53rem;
+  padding: 5rem; }
+
 .navigation__checkbox {
   display: none; }
 
