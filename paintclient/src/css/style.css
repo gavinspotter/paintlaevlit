@@ -53,7 +53,13 @@ body {
 .auth__card {
   position: absolute;
   right: 45rem;
-  top: 20rem; }
+  top: 10rem;
+  width: 40rem;
+  height: 40rem;
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  border-radius: 100%; }
 
 .newpaint__card {
   display: inline-block;
