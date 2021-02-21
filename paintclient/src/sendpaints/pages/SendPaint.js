@@ -9,6 +9,7 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHistory } from "react-router-dom"
 import Button from "../../shared/components/FormElements/Button"
+import "../../css/style.css"
 
 
 const SendPaint = () => {
