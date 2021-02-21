@@ -5,6 +5,7 @@ import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 import SPList from "../components/SPList"
+import '../../css/style.css'
 
 const SentPaint = () => {
 
