@@ -60,7 +60,7 @@ const SPItem = (props) => {
                 this cant be undone are you sure?
             </Modal>
             <li>
-                <Card>
+                <div className="sentpaint__card">
                     {isLoading && <LoadingSpinner asOverlay />}
                     <div>
                         <div>
@@ -82,7 +82,7 @@ const SPItem = (props) => {
                     <Button onClick={showDeleteWarningHandler}>
                         delete
                 </Button>
-                </Card>
+                </div>
             </li>
         </React.Fragment>
     )
