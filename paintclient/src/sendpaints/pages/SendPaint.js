@@ -80,7 +80,8 @@ const SendPaint = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            <Card>
+            <div className="sendpaint__card">
+                <h2> send paint </h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {isLoading && <LoadingSpinner asOverlay />}
 
@@ -123,7 +124,7 @@ const SendPaint = () => {
                     <Button> send </Button>
 
                 </form>
-            </Card>
+            </div>
         </React.Fragment>
     )
 
