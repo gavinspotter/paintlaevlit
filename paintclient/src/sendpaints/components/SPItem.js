@@ -4,6 +4,7 @@ import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Modal from "../../shared/components/UIElements/Modal"
+import "../../css/style.css"
 
 
 
