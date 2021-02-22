@@ -65,6 +65,7 @@ const App = () => {
           <SassNav />
           <ReceivedPaint />
         </Route>
+        <Redirect to="/paints/new" />
       </Switch>
     )
   } else {

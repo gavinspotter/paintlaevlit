@@ -52,7 +52,7 @@ const NewPaint = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <div className="newpaint__card">
-
+                <h2>save paint</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {isLoading && <LoadingSpinner asOverlay />}
                     <Input
