@@ -7,19 +7,21 @@ const RPItem = (props) => {
         <li>
             <div className="receivedpaint__card">
                 <div>
-                    {props.paintname}
-                </div>
-                <div>
-                    {props.paintcode}
-                </div>
-                <div>
-                    {props.paintbrand}
-                </div>
-                <div>
-                    {props.base}
-                </div>
-                <div>
-                    {props.storecode}
+                    <div>
+                        {props.paintname}
+                    </div>
+                    <div>
+                        {props.paintcode}
+                    </div>
+                    <div>
+                        {props.paintbrand}
+                    </div>
+                    <div>
+                        {props.base}
+                    </div>
+                    <div>
+                        {props.storecode}
+                    </div>
                 </div>
             </div>
         </li>
