@@ -43,7 +43,7 @@ const SentPaint = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading && loadedPaint && <SPList items={loadedPaint} />}
+            {!isLoading && loadedPaint && <SPList items={loadedPaint} onDelete={paintDeleteHandler} />}
         </React.Fragment>
     )
 }
