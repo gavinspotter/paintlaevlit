@@ -6,7 +6,7 @@ const RPItem = (props) => {
     return (
         <li>
             <div className="receivedpaint__card">
-                <div>
+                <div className="receivedpaint__card-text">
                     <div>
                         {props.paintname}
                     </div>

@@ -120,6 +120,8 @@ body {
   position: relative;
   margin-left: 8rem;
   margin-top: 2rem; }
+  .receivedpaint__card-text {
+    margin-top: 3rem; }
 
 .navigation__checkbox {
   display: none; }
