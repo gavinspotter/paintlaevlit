@@ -110,6 +110,17 @@ body {
 .sentpaint__card-text {
   margin-top: 3rem; }
 
+.receivedpaint__card {
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  width: 20rem;
+  height: 19rem;
+  border-radius: 5%;
+  position: relative;
+  margin-left: 8rem;
+  margin-top: 2rem; }
+
 .navigation__checkbox {
   display: none; }
 

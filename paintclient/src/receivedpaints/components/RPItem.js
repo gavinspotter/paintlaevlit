@@ -5,7 +5,7 @@ const RPItem = (props) => {
 
     return (
         <li>
-            <Card>
+            <div className="receivedpaint__card">
                 <div>
                     {props.paintname}
                 </div>
@@ -21,7 +21,7 @@ const RPItem = (props) => {
                 <div>
                     {props.storecode}
                 </div>
-            </Card>
+            </div>
         </li>
     )
 }
