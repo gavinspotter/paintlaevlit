@@ -1,10 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const RPItem = (props) => {
+
+
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
+    const [showConfirmModal, setShowConfirmModal] = useState(false)
+
+    const showDeleteWarningHandler = () => {
+        setShowConfirmModal(true)
+    }
+
+    const cancelDeleteHandler = () => {
+        setShowConfirmModal(false)
+    }
 
     return (
 
