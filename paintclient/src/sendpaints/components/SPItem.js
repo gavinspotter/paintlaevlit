@@ -62,26 +62,30 @@ const SPItem = (props) => {
             <li>
                 <div className="sentpaint__card">
                     {isLoading && <LoadingSpinner asOverlay />}
-                    <div>
+                    <div className="sentpaint__card-text">
+
+
                         <div>
-                            {props.paintname}
+                            <div>
+                                {props.paintname}
+                            </div>
+                            <div>
+                                {props.paintcode === "" ? null : props.paintcode}
+                            </div>
+                            <div>
+                                {props.paintbrand === "" ? null : props.paintbrand}
+                            </div>
+                            <div>
+                                {props.base === "" ? null : props.base}
+                            </div>
+                            <div>
+                                {props.storecode === "" ? null : props.storecode}
+                            </div>
                         </div>
-                        <div>
-                            {props.paintcode === "" ? null : props.paintcode}
-                        </div>
-                        <div>
-                            {props.paintbrand === "" ? null : props.paintbrand}
-                        </div>
-                        <div>
-                            {props.base === "" ? null : props.base}
-                        </div>
-                        <div>
-                            {props.storecode === "" ? null : props.storecode}
-                        </div>
+                        <Button onClick={showDeleteWarningHandler}>
+                            delete
+                        </Button>
                     </div>
-                    <Button onClick={showDeleteWarningHandler}>
-                        delete
-                </Button>
                 </div>
             </li>
         </React.Fragment>
