@@ -103,7 +103,8 @@ body {
   width: 20rem;
   height: 19rem;
   border-radius: 5%;
-  position: relative; }
+  position: relative;
+  margin: 5rem 56rem; }
 
 .navigation__checkbox {
   display: none; }
