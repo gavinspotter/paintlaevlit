@@ -70,7 +70,19 @@ body {
   background: #fff;
   position: absolute;
   width: 20rem;
-  height: 20rem;
+  height: 25rem;
+  border-radius: 5%;
+  top: 17rem;
+  right: 53rem;
+  padding: 5rem; }
+
+.sendpaint__card {
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  width: 20rem;
+  height: 25rem;
   border-radius: 5%;
   top: 17rem;
   right: 53rem;
