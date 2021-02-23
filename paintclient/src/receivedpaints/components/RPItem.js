@@ -19,6 +19,20 @@ const RPItem = (props) => {
         setShowConfirmModal(false)
     }
 
+    const confirmDeleteHandler = async () => {
+        setShowConfirmModal(false)
+
+        try {
+            await sendRequest(
+                `http://localhost:5000/api/receivedpaints/${props.id}`,
+                "DELETE"
+            )
+            props.onDelete(props.id)
+        } catch (err) {
+
+        }
+    }
+
     return (
 
         <React.Fragment>
