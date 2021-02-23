@@ -23,6 +23,7 @@ const RPList = (props) => {
                         paintcode={paint.paintcode}
                         paintbrand={paint.paintbrand}
                         base={paint.base} storecode={paint.storecode}
+                        onDelete={props.onDelete}
                     />
                 )
             }

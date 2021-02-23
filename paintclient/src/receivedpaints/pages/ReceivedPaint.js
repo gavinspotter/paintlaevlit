@@ -30,6 +30,10 @@ const ReceivedPaint = () => {
         fetchPaints()
     }, [sendRequest, userId])
 
+    const paintDeleteHandler = (deletedPaintId) => {
+        setLoadedPaint((prevPaints) => prevPaints.filter((paint) => paint.id !== deletedPaintId))
+    }
+
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
@@ -38,7 +42,7 @@ const ReceivedPaint = () => {
                     <LoadingSpinner />
                 </div>
             )}
-            {!isLoading && loadedPaint && <RPList items={loadedPaint} />}
+            {!isLoading && loadedPaint && <RPList items={loadedPaint} onDelete={paintDeleteHandler} />}
         </React.Fragment>
     )
 
