@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Button from "../../shared/components/FormElements/Button"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 import Modal from "../../shared/components/UIElements/Modal"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
@@ -58,7 +59,7 @@ const RPItem = (props) => {
             </Modal>
             <li>
                 <div className="receivedpaint__card">
-
+                    {isLoading && <LoadingSpinner asOverlay />}
                     <div className="receivedpaint__card-text">
                         <div>
                             {props.paintname}
