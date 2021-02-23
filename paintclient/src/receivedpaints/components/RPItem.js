@@ -1,6 +1,8 @@
 import React, { useState } from "react"
+import Button from "../../shared/components/FormElements/Button"
 import Card from "../../shared/components/UIElements/Card"
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
+import Modal from "../../shared/components/UIElements/Modal"
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
@@ -36,9 +38,27 @@ const RPItem = (props) => {
     return (
 
         <React.Fragment>
-            <ErrorModal />
+            <ErrorModal error={error} onClear={clearError} />
+            <Modal
+                show={showConfirmModal}
+                onCancel={cancelDeleteHandler}
+                header="are you sure?"
+                footer={
+                    <React.Fragment>
+                        <Button onClick={cancelDeleteHandler}>
+                            cancel
+                        </Button>
+                        <Button onClick={confirmDeleteHandler}>
+                            delete
+                        </Button>
+                    </React.Fragment>
+                }
+            >
+                this cant be undone are you sure?
+            </Modal>
             <li>
                 <div className="receivedpaint__card">
+
                     <div className="receivedpaint__card-text">
                         <div>
                             {props.paintname}
@@ -55,6 +75,9 @@ const RPItem = (props) => {
                         <div>
                             {props.storecode}
                         </div>
+                        <Button onClick={showDeleteWarningHandler}>
+                            delete
+                        </Button>
                     </div>
                 </div>
             </li>
