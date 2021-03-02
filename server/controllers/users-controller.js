@@ -1,4 +1,5 @@
 const HttpError = require("../models/HttpError");
+const user = require("../models/user");
 const User = require("../models/user");
 
 const getUserByEmail = async (req, res, next) => {
@@ -43,6 +44,16 @@ const signup = async (req, res, next) => {
   }
 
   let hashedPassword
+
+  try {
+    hashedPassword = await bcrypt.hash(password, 12);
+  } catch (err) {
+    const error = new HttpError(
+      "couldnt create user.",
+      500
+    )
+    return next(error)
+  }
 
 
   const createdUser = new User({
