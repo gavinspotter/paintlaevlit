@@ -69,9 +69,11 @@ const signup = async (req, res, next) => {
     await createdUser.save();
   } catch (err) {
     const error = new HttpError("signing up failed please try again.", 500);
-    console.log(err)
+
     return next(error);
   }
+
+  let token
 
   res.status(201).json({ user: createdUser.toObject({ getters: true }) });
 };
