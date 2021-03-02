@@ -10,10 +10,14 @@ router.get("/user/:uid", paintController.getPaintsByUserId)
 
 router.get("/:pid", paintController.getPaintById)
 
-router.post("/", paintController.createPaint);
+
 
 router.patch("/:pid", paintController.updatePaint)
 
 router.delete("/:pid", paintController.deletePaint)
+
+router.use(checkAuth);
+
+router.post("/", paintController.createPaint);
 
 module.exports = router;
