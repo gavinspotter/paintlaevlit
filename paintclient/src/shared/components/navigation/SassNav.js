@@ -29,8 +29,8 @@ const SassNav = () => {
                 <ul className="navigation__list">
                     <li className="navigation__item" ><Link to={`/${auth.userId}/paints`} onClick={handleClick} className="navigation__link">saved paint</Link></li>
                     <li className="navigation__item" ><Link to={`/paints/new`} onClick={handleClick} className="navigation__link">create paint</Link></li>
-                    <li className="navigation__item" ><Link to={`/${auth.userId}/sent`} onClick={handleClick} className="navigation__link">send paint</Link></li>
-                    <li className="navigation__item" ><Link to={`/send/new`} onClick={handleClick} className="navigation__link">sent paint</Link></li>
+                    <li className="navigation__item" ><Link to={`/${auth.userId}/sent`} onClick={handleClick} className="navigation__link">sent paint</Link></li>
+                    <li className="navigation__item" ><Link to={`/send/new`} onClick={handleClick} className="navigation__link">send paint</Link></li>
                     <li className="navigation__item" ><Link to={`/${auth.userId}/received`} onClick={handleClick} className="navigation__link">received paint</Link></li>
                 </ul>
             </nav>
