@@ -3,7 +3,7 @@ const User = require("../models/user");
 
 const getUserByEmail = async (req, res, next) => {
 
-  const {email} = req.body
+  const { email } = req.body
 
   let user;
 
@@ -17,7 +17,7 @@ const getUserByEmail = async (req, res, next) => {
     return next(error);
   }
 
-  res.status(201).json({ user: user.map((id)=> id.toObject({getters: true})) });
+  res.status(201).json({ user: user.map((id) => id.toObject({ getters: true })) });
 };
 
 const signup = async (req, res, next) => {
@@ -33,6 +33,15 @@ const signup = async (req, res, next) => {
     );
     return next(error);
   }
+
+  if (existingUser) {
+    const error = new HttpError(
+      'User exists already, please login instead.',
+      422
+    );
+    return next(error);
+  }
+
 
   const createdUser = new User({
     name,
@@ -73,9 +82,10 @@ const login = async (req, res, next) => {
     return next(error);
   }
 
-  res.json({ 
+  res.json({
     message: "logged in",
-    user: existingUser.toObject({ getters: true }) });
+    user: existingUser.toObject({ getters: true })
+  });
 };
 
 exports.signup = signup;
