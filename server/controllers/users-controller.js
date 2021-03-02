@@ -59,7 +59,7 @@ const signup = async (req, res, next) => {
   const createdUser = new User({
     name,
     email,
-    password,
+    password: hashedPassword,
     paints: [],
     sendpaints: [],
     receivepaints: []
