@@ -20,23 +20,12 @@ import Signup from "./user/pages/Signup"
 
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [userId, setUserId] = useState(false)
 
-  const login = useCallback((uid) => {
-    setIsLoggedIn(true)
-    setUserId(uid)
-  }, [])
-
-
-  const logout = useCallback(() => {
-    setIsLoggedIn(false)
-    setUserId(null)
-  }, [])
+  const { token, login, logout, userId } = useAuth();
 
   let routes
 
-  if (isLoggedIn) {
+  if (token) {
     routes = (
 
       <Switch>
@@ -85,7 +74,7 @@ const App = () => {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn: isLoggedIn, userId: userId, login: login, logout: logout }}
+      value={{ isLoggedIn: !!token, userId: userId, token: token, login: login, logout: logout }}
     >
       <Router>
         <Background>
