@@ -1,6 +1,9 @@
 const HttpError = require("../models/HttpError");
-const user = require("../models/user");
+
 const User = require("../models/user");
+
+const bcrypt = require("bcryptjs")
+const jwt = require("jsonwebtoken")
 
 const getUserByEmail = async (req, res, next) => {
 
@@ -26,7 +29,7 @@ const signup = async (req, res, next) => {
 
   let existingUser;
   try {
-    existingUser = User.findOne({ email: email });
+    existingUser = await User.findOne({ email: email });
   } catch (err) {
     const error = new HttpError(
       "signing up failed please try again later",
