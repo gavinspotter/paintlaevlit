@@ -12,7 +12,7 @@ const User = require("../models/user")
 const sharePaint = async (req, res, next) => {
 
     const {
-        room, 
+        room,
         roomdimensions,
         paintname,
         paintcode,
@@ -31,7 +31,7 @@ const sharePaint = async (req, res, next) => {
         paintbrand,
         storecode,
         base,
-        sender
+        sender: req.userData.userId
     })
 
     const receivedPaint = new Receivepaints({
@@ -48,9 +48,9 @@ const sharePaint = async (req, res, next) => {
     let sendingUser
 
     try {
-        sendingUser = await User.findById(sender)
+        sendingUser = await User.findById(req.userData.userId)
     } catch {
-        const error = new HttpError ("couldnt find sender id", 500)
+        const error = new HttpError("couldnt find sender id", 500)
         return next(error)
     }
 
@@ -62,19 +62,19 @@ const sharePaint = async (req, res, next) => {
     try {
         await sendedPaint.save()
     } catch (error) {
-        
+
     }
 
     try {
         sendingUser.sendpaints.push(sendedPaint)
     } catch (error) {
-        
+
     }
 
     try {
         await sendingUser.save()
     } catch (error) {
-        
+
     }
 
     let receivingUser
@@ -82,7 +82,7 @@ const sharePaint = async (req, res, next) => {
     try {
         receivingUser = await User.findById(receiver)
     } catch (error) {
-        
+
     }
 
     if (!receivingUser) {
@@ -92,22 +92,22 @@ const sharePaint = async (req, res, next) => {
     try {
         await receivedPaint.save()
     } catch (error) {
-        
+
     }
 
     try {
         receivingUser.receivepaints.push(receivedPaint)
     } catch (error) {
-       
+
     }
 
     try {
         await receivingUser.save()
     } catch (error) {
-        
+
     }
 
-    res.status(201).json({receivedpaint: receivedPaint, sentpaint: sendedPaint })
+    res.status(201).json({ receivedpaint: receivedPaint, sentpaint: sendedPaint })
 
 }
 

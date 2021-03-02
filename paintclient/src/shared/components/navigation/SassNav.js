@@ -32,7 +32,7 @@ const SassNav = () => {
                     <li className="navigation__item" ><Link to={`/${auth.userId}/sent`} onClick={handleClick} className="navigation__link">sent paint</Link></li>
                     <li className="navigation__item" ><Link to={`/send/new`} onClick={handleClick} className="navigation__link">send paint</Link></li>
                     <li className="navigation__item" ><Link to={`/${auth.userId}/received`} onClick={handleClick} className="navigation__link">received paint</Link></li>
-                    <li className="navigation__item" > <button className="navigation__link" onClick={auth.logout}> logout </button></li>
+                    <li className="navigation__item" > <div className="navigation__link" onClick={auth.logout}> logout </div></li>
                 </ul>
             </nav>
 
