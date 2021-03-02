@@ -14,6 +14,7 @@ import Background from "./shared/components/navigation/Background"
 import MainNavigation from "./shared/components/navigation/MainNavigation"
 import SassNav from "./shared/components/navigation/SassNav"
 import { AuthContext } from "./shared/context/auth-context"
+import { useAuth } from './shared/hooks/auth-hook';
 import Auth from "./user/pages/Auth"
 import Signup from "./user/pages/Signup"
 
