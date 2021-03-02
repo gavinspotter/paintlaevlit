@@ -121,6 +121,14 @@ const login = async (req, res, next) => {
     return next(error)
   }
 
+  if (!isValidPassword) {
+    const error = new HttpError(
+      "invalid credentials",
+      403
+    );
+    return next(error);
+  }
+
   res.json({
     message: "logged in",
     user: existingUser.toObject({ getters: true })
