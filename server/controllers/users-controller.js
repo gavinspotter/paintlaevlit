@@ -111,6 +111,16 @@ const login = async (req, res, next) => {
   }
   let isValidPassword = false;
 
+  try {
+    isValidPassword = await bcrypt.compare(password, existingUser.password)
+  } catch (err) {
+    const error = new HttpError(
+      "couldnt log you in",
+      500
+    )
+    return next(error)
+  }
+
   res.json({
     message: "logged in",
     user: existingUser.toObject({ getters: true })
