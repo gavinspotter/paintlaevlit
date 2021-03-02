@@ -5,10 +5,10 @@ const HttpError = require("../models/HttpError");
 
 const User = require("../models/user");
 
-const getPaintById = async (req,res,next) => {
+const getPaintById = async (req, res, next) => {
   const paintId = req.params.pid
 
-  let paint 
+  let paint
 
   try {
     paint = await Paint.findById(paintId)
@@ -22,18 +22,18 @@ const getPaintById = async (req,res,next) => {
     return next(error)
   }
 
-  res.json({paint: paint.toObject({getters:true})})
+  res.json({ paint: paint.toObject({ getters: true }) })
 
 }
 
 
-const getPaintsByUserId = async(req, res, next) => {
+const getPaintsByUserId = async (req, res, next) => {
   const userId = req.params.uid
 
   let paints
 
   try {
-    paints = await Paint.find({creator: userId})
+    paints = await Paint.find({ creator: userId })
   } catch (err) {
     const error = new HttpError("fetching paints failed, please try again", 500)
     return next(error)
@@ -43,7 +43,7 @@ const getPaintsByUserId = async(req, res, next) => {
     return next(new HttpError("could not find any paints"))
   }
 
-  res.json({paints: paints.map((paint)=> paint.toObject({getters:true}))})
+  res.json({ paints: paints.map((paint) => paint.toObject({ getters: true })) })
 
 }
 
@@ -69,13 +69,13 @@ const createPaint = async (req, res, next) => {
     paintbrand,
     storecode,
     base,
-    creator,
+    creator: req.userData.userId
   });
 
   let user;
 
   try {
-    user = await User.findById(creator);
+    user = await User.findById(req.userData.userId);
   } catch {
     const error = new HttpError("creating paint failed please try again", 500);
     return next(error);
@@ -91,7 +91,7 @@ const createPaint = async (req, res, next) => {
   try {
 
     await createdPaint.save();
-    
+
   } catch (err) {
     // const error = new HttpError("creating paint fail please try again", 500);
     // return next(error);
@@ -100,13 +100,13 @@ const createPaint = async (req, res, next) => {
   try {
     user.paints.push(createdPaint);
   } catch (error) {
-    
+
   }
 
   try {
     await user.save()
   } catch (error) {
-    
+
   }
 
   res.status(201).json({ paint: createdPaint });
@@ -124,7 +124,7 @@ const updatePaint = async (req, res, next) => {
 
   const paintId = req.params.pid
 
-  let paint 
+  let paint
 
   try {
     paint = await Paint.findById(paintId)
@@ -134,7 +134,7 @@ const updatePaint = async (req, res, next) => {
       500
     )
     return next(error)
-    
+
   }
 
   paint.paintname = paintname
@@ -153,43 +153,43 @@ const updatePaint = async (req, res, next) => {
     return next(error)
   }
 
-  res.status(200).json({ paint: paint.toObject({getters:true})})
-  
+  res.status(200).json({ paint: paint.toObject({ getters: true }) })
+
 }
 
 const deletePaint = async (req, res, next) => {
-    const paintId = req.params.pid
+  const paintId = req.params.pid
 
-    let paint 
+  let paint
 
-    try {
-      paint = await Paint.findById(paintId).populate("creator")
+  try {
+    paint = await Paint.findById(paintId).populate("creator")
 
-    } catch (err) {
-      const error = new HttpError("couldnt find paint", 500)
-      return next (error)
-      
-    }
+  } catch (err) {
+    const error = new HttpError("couldnt find paint", 500)
+    return next(error)
 
-    try {
-      await paint.remove()
-    } catch (err) {
-      
-    }
-  
-    try {
-      paint.creator.paints.pull(paint)
-    } catch (err) {
-      
-    }
+  }
 
-    try {
-      await paint.creator.save()
-    } catch (err) {
-      
-    }
+  try {
+    await paint.remove()
+  } catch (err) {
 
-    res.status(200).json({message: "deleted"})
+  }
+
+  try {
+    paint.creator.paints.pull(paint)
+  } catch (err) {
+
+  }
+
+  try {
+    await paint.creator.save()
+  } catch (err) {
+
+  }
+
+  res.status(200).json({ message: "deleted" })
 }
 
 exports.getPaintById = getPaintById
