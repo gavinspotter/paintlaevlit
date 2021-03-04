@@ -22,7 +22,7 @@ const NewPaint = () => {
     const onSubmit = async (data) => {
         try {
             await sendRequest(
-                "http://localhost:5000/api/paints",
+                process.env.REACT_APP_BACKEND_URL + "/paints",
                 "POST",
                 JSON.stringify({
                     paintname: data.paintname,
