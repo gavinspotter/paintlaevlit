@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { useForm } from "react-hook-form"
 import Input from "../../shared/components/FormElements/Input"
-import Card from "../../shared/components/UIElements/Card"
+
 import ErrorModal from "../../shared/components/UIElements/ErrorModal"
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner"
 

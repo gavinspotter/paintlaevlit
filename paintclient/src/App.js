@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react"
+import React from "react"
 import {
   BrowserRouter as Router,
   Redirect,
@@ -11,7 +11,6 @@ import ReceivedPaint from "./receivedpaints/pages/ReceivedPaint"
 import SendPaint from "./sendpaints/pages/SendPaint"
 import SentPaint from "./sendpaints/pages/SentPaint"
 import Background from "./shared/components/navigation/Background"
-import MainNavigation from "./shared/components/navigation/MainNavigation"
 import SassNav from "./shared/components/navigation/SassNav"
 import { AuthContext } from "./shared/context/auth-context"
 import { useAuth } from './shared/hooks/auth-hook';
