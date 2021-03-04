@@ -31,7 +31,7 @@ const UpdatePaint = () => {
         const fetchPaint = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/paints/${paintId}`
+                    `${process.env.REACT_APP_BACKEND_URL}/paints/${paintId}`
                 )
                 setLoadedPaintname(responseData.paint.paintname)
                 setLoadedPaintcode(responseData.paint.paintcode)
