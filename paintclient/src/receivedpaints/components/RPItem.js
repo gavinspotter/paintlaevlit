@@ -27,7 +27,7 @@ const RPItem = (props) => {
 
         try {
             await sendRequest(
-                `http://localhost:5000/api/receivedpaints/${props.id}`,
+                `${process.env.REACT_APP_BACKEND_URL}/receivedpaints/${props.id}`,
                 "DELETE"
             )
             props.onDelete(props.id)
