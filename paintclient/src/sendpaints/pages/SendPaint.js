@@ -49,7 +49,7 @@ const SendPaint = () => {
 
         try {
             await sendRequest(
-                "http://localhost:5000/api/sharingpaints",
+                process.env.REACT_APP_BACKEND_URL + "/sharingpaints",
                 "POST",
                 JSON.stringify({
                     paintname: data.paintname,
