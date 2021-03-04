@@ -29,7 +29,7 @@ const SendPaint = () => {
         let rd
         try {
             const responseData = await sendRequest(
-                "http://localhost:5000/api/users/email",
+                process.env.REACT_APP_BACKEND_URL + "/users/email",
                 "POST",
                 JSON.stringify({
                     email: data.email
