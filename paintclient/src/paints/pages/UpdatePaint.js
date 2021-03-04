@@ -48,7 +48,7 @@ const UpdatePaint = () => {
     const onSubmit = async (data) => {
         try {
             await sendRequest(
-                `http://localhost:5000/api/paints/${paintId}`,
+                `${process.env.REACT_APP_BACKEND_URL}/paints/${paintId}`,
                 "PATCH",
                 JSON.stringify({
                     paintname: data.paintname,
