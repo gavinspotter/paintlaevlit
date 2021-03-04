@@ -28,7 +28,7 @@ const PaintItem = (props) => {
 
         try {
             await sendRequest(
-                `http://localhost:5000/api/paints/${props.id}`,
+                `${process.env.REACT_APP_BACKEND_URL}/paints/${props.id}`,
                 "DELETE"
 
             )
