@@ -19,7 +19,7 @@ const Paint = () => {
         const fetchPaints = async () => {
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/paints/user/${userId}`
+                    `${process.env.REACT_APP_BACKEND_URL}/paints/user/${userId}`
                 )
                 setLoadedPaint(responseData.paints)
             } catch (err) {
