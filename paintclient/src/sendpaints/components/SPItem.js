@@ -29,7 +29,7 @@ const SPItem = (props) => {
 
         try {
             await sendRequest(
-                `http://localhost:5000/api/sentpaints/${props.id}`,
+                `${process.env.REACT_APP_BACKEND_URL}/sentpaints/${props.id}`,
                 "DELETE"
             )
             props.onDelete(props.id)
